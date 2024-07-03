@@ -140,13 +140,6 @@ html {
   display: flex;
 }
 
-
-.box--additional-text {
-    margin-top: 20px; /* Sesuaikan jarak margin sesuai kebutuhan */
-    font-size: 16px; /* Sesuaikan ukuran font sesuai kebutuhan */
-    color: #ffffff; /* Sesuaikan warna teks sesuai kebutuhan */
-    text-align: center; /* Sesuaikan perataan teks sesuai kebutuhan */
-  }
   
 .box--TEXT1 {
   color: rgb(255, 255, 255);
@@ -156,7 +149,32 @@ html {
   padding-left: 20px;
 }
 
-  
+.welcome-box {
+  background-color: #610404; /* Warna latar belakang */
+  color: #ffffff; /* Warna teks */
+  margin-top: 15px;
+  padding: 25px 120px;
+  border-radius: 50px; /* Mengatur bentuk kotak bulat */
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  text-align: center;
+  display: inline-block; /* Memastikan kotak tidak mengambil lebar maksimal */
+}
+
+.welcome-box h1 {
+  margin: 0;
+  font-size: medium;
+}
+
+.box--additional-text {
+    margin-top: 35px; /* Sesuaikan jarak margin sesuai kebutuhan */
+    font-size: 16px; /* Sesuaikan ukuran font sesuai kebutuhan */
+    color: #ffffff; /* Sesuaikan warna teks sesuai kebutuhan */
+    text-align: left; /* Sesuaikan perataan teks sesuai kebutuhan */
+    margin-right: 55vw; /* Setengah halaman dari kanan */
+    margin-left: 0vw; /* Setengah halaman dari kanan */
+}
+
+
 .box--hero p {
   font-size: 1.2em;
   margin: 10px 0px 20px 0px;
@@ -589,4 +607,29 @@ html {
   .box--hero button:hover {
     background-color: #ff6347;
   }
+}
+
+.box--mascot {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.box--mascot-image {
+    height: 600px;
+    animation: slideLeftMascot 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideLeftMascot {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
 }
