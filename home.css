@@ -421,6 +421,16 @@ html {
   }
 }
 
+.box--footer {
+  background-color: #610404;
+  color: var(--bg-secondary);
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 375px) and (max-width: 780px) {
   .box--iconmenu {
     display: flex;
@@ -631,5 +641,5 @@ html {
         transform: translateX(0);
         opacity: 1;
     }
-
-}
+  }
+    
