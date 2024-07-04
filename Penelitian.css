@@ -19,7 +19,7 @@ html {
     background: transparent;
     position: sticky;
     margin: 0 0 0 0;
-    background-image: url('bgnav.jpg');
+    background-image: url('bgnav.png');
     background-size: cover; /* Mengatur gambar agar menutupi seluruh area */
     background-position: center; /* Mengatur posisi gambar di tengah */
     z-index: 100;
@@ -424,7 +424,7 @@ html {
 
 .box--footer {
   background-color: #610404;
-  color: var(--bg-secondary);
+  color: #ffffff;
   padding: 5px;
   text-align: center;
   display: flex;
