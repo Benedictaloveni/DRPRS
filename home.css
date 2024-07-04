@@ -423,7 +423,7 @@ html {
 
 .box--footer {
   background-color: #610404;
-  color: var(--bg-secondary);
+  color: #ffffff;
   padding: 5px;
   text-align: center;
   display: flex;
