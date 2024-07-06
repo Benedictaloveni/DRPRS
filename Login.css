@@ -1,0 +1,204 @@
+/* Styling untuk Seluruh Body */
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #610404;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Kontainer untuk Logo */
+.logo-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Styling untuk Logo */
+.logo-container .logo {
+  width: 200px;
+  height: auto;
+}
+
+/* Kontainer Utama untuk Konten Login */
+.container {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper untuk Konten Di Dalam Kontainer */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Kontainer untuk Gambar Di Sebelah Kiri */
+.image-container {
+  flex: 1;
+  text-align: center;
+  margin-right: 20px;
+}
+
+/* Styling untuk Gambar Dalam Slideshow */
+.image-container img {
+  max-width: 100%;
+  max-height: 400px;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+/* Menampilkan Gambar yang Sedang Aktif Dalam Slideshow */
+.image-container img.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Kontainer untuk Form Login Di Sebelah Kanan */
+.login-container {
+  flex: 1;
+  text-align: left;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Judul "Welcome Back!" */
+.login-container h2 {
+  margin-top: 0;
+  color: #333333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Styling untuk Form Login */
+#login-form {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Styling untuk Label Di Form */
+#login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styling untuk Input Password */
+#password {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk tombol login */
+button {
+  padding: 10px 20px;
+  background-color: #06062c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+/* Efek Hover pada Tombol Login */
+button:hover {
+  background-color: #3939a1;
+}
+
+/* Pesan Error untuk Password Tidak Valid */
+#error-message {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Media Queries untuk Desain Responsif */
+@media (min-width: 1000px) and (max-width: 1500px) {
+  .container {
+    width: 70%;
+  }
+
+  .image-container img {
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 780px) and (max-width: 1000px) {
+  .container {
+    width: 80%;
+  }
+
+  .image-container img {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image-container {
+    flex: 1;
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  .login-container {
+    flex: 1;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  button {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    width: 95%;
+  }
+
+  .logo-container .logo {
+    width: 120px;
+  }
+
+  button {
+    width: 70%;
+  }
+
+  .login-container h2 {
+    font-size: 1.2em;
+  }
+
+  #password {
+    padding: 8px;
+  }
+}

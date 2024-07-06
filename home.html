@@ -1,42 +1,70 @@
 <!DOCTYPE html>
-<html lang="en"><!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Judul Halaman -->
     <title>DRPRS</title>
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+     <!-- Mengarahkan ke Halaman Login Saat Kunjungan Pertama -->
+    <script>
+        // Redirect to login page on first visit
+        if (!sessionStorage.getItem('visited')) {
+            sessionStorage.setItem('visited', true);
+            window.location.href = 'login.html';
+        }
+    </script>
 </head>
+
 <body>
-    <header class="box--header">
-        <div class="box--logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <nav class="box--navigasi">
-            <ul class="box--subnavigasi">
-                <li class="box--iconmenu">
-                    <a class="box--judul" href="Home.html" style="--i: 1">
-                        <div><img class="box--icon" src="Home.png" /></div>
-                        <p class="box--tulisan">Home</p>
-                    </a>
-                </li>
-                <li class="box--iconmenu">
-                    <a class="box--judul" href="Penelitian.html" style="--i: 1">
-                        <div><img class="box--icon" src="Research.png" /></div>
-                        <p class="box--tulisan">Research</p>
-                    </a>
-                </li>
-                <li class="box--iconmenu">
-                    <a class="box--judul" href="Profil.html" style="--i: 2">
-                        <div><img class="box--icon" src="Profil.png" /></div>
-                        <p class="box--tulisan">Profil</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main>
+
+        <!-- Mulai Header -->
+        <header class="box--header">
+            <div class="box--logo">
+                <img src="Assets/logo.png" alt="Logo">
+            </div>
+
+            <!-- Navigasi Menu -->
+            <nav class="box--navigasi">
+                <ul class="box--subnavigasi">
+                    <li class="box--iconmenu">
+                        <a class="box--judul" href="login.html" style="--i: 1">
+                            <div><img class="box--icon" src="Assets/Home.png" /></div>
+                            <p class="box--tulisan">Home</p>
+                        </a>
+                    </li>
+                    <li class="box--iconmenu">
+                        <a class="box--judul" href="Research.html" style="--i: 1">
+                            <div><img class="box--icon" src="Assets/Research.png" /></div>
+                            <p class="box--tulisan">Research</p>
+                        </a>
+                    </li>
+                    <li class="box--iconmenu">
+                        <a class="box--judul" href="Profile.html" style="--i: 2">
+                            <div><img class="box--icon" src="Assets/Profile.png" /></div>
+                            <p class="box--tulisan">Profile</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Toggle Menu -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </header>
+
+        <!-- Hero Section -->
         <div class="box--hero">
             <div class="box--overlay">
                 <div class="box--text-content">
@@ -48,37 +76,39 @@
                     </h1>
                     <h1 class="box--text-setting" style="--m: 2">
                         <ul class="box--baris2">
-                            <li class="box--TEXT1">and</li>
+                            <li class="box--TEXT1">And</li>
                             <li class="box--TEXT2">Remote Sensing</li>
                         </ul>
                     </h1>
 
                     <div class="welcome-box">
-                      <h1>Welcome to Our Website</h1>
+                        <h1>Welcome to Our Website!</h1>
                     </div>
-                    
+
                     <h2 class="box--additional-text">
                         This platform serves as a comprehensive repository of research data and projects conducted by students in the field of rock physics and remote sensing. Here, you can explore various topics and learn about innovative methods and findings.
                     </h2>
 
-                    <a href="index.html">
+                    <a href="login.html">
                         <div class="box--btn"></div>
                     </a>
                 </div>
             </div>
         </div>
 
+        <!-- Mascot Section -->
         <div class="box--mascot">
-            <img src="mascot.png" alt="Mascot" class="box--mascot-image">
+            <img src="Assets/mascot.png" alt="Mascot" class="box--mascot-image">
         </div>
-
-
-
     </main>
 </body>
 
+<!-- Footer -->
 <footer class="box--footer">
-  <p>Copyright © 2024 Department of Geophysics FMIPA Unpad</p>
+    <p>Copyright © 2024 Department of Geophysics FMIPA Unpad</p>
 </footer>
+
+<!-- JavaScript -->
+<script src="home.js"></script>
 
 </html>
