@@ -12,41 +12,65 @@
 
         <!-- Bagian Logo -->
         <div class="box--logo">
-
             <img src="Assets/logo.png" alt="Logo">
         </div>
         
         <!-- Bagian Navigasi -->
         <nav class="box--navigasi">
             <ul class="box--subnavigasi">
-
-                <!-- Tautan Menu Home -->
                 <li class="box--iconmenu">
-                    <a class="box--judul" href="Home.html" style="--i: 1">
+                    <a class="box--judul" href="home.html" style="--i: 1">
                         <div><img class="box--icon" src="Assets/Home.png" /></div>
                         <p class="box--tulisan">Home</p>
                     </a>
                 </li>
-
-                <!-- Tautan Menu Research -->
-                <li class="box--iconmenu">
-                    <a class="box--judul" href="Research.html" style="--i: 1">
+                <li class="box--iconmenu dropdown">
+                    <a class="box--judul" href="Research.html" onclick="toggleDropdown(event, 'research-dropdown')" style="--i: 1">
                         <div><img class="box--icon" src="Assets/Research.png" /></div>
-                        <p class="box--tulisan">Research</p>
+                        <p class="box--tulisan">Research <span class="arrow">&#9660;</span></p>
                     </a>
+                    <ul id="research-dropdown" class="dropdown-content">
+                        <a href="aResearch.html">Option A</a>
+                        <a href="bResearch.html">Option B</a>
+                    </ul>
                 </li>
-
-                <!-- Tautan Menu Profile -->
+                <li class="box--iconmenu dropdown">
+                    <a class="box--judul" href="Software.html" onclick="toggleDropdown(event, 'software-dropdown')" style="--i: 2">
+                        <div><img class="box--icon" src="Assets/software.png" /></div>
+                        <p class="box--tulisan">Software <span class="arrow">&#9660;</span></p>
+                    </a>
+                    <ul id="software-dropdown" class="dropdown-content">
+                        <a href="aSoftware.html">Option A</a>
+                        <a href="bSoftware.html">Option B</a>
+                    </ul>
+                </li>
                 <li class="box--iconmenu">
                     <a class="box--judul" href="Profile.html" style="--i: 2">
                         <div><img class="box--icon" src="Assets/Profile.png" /></div>
                         <p class="box--tulisan">Profile</p>
                     </a>
                 </li>
+                <li class="box--iconmenu">
+                    <a class="box--judul" href="News.html" style="--i: 3">
+                        <div><img class="box--icon" src="Assets/news.png" /></div>
+                        <p class="box--tulisan">News Archive</p>
+                    </a>
+                </li>
+                <li class="box--iconmenu">
+                    <a class="box--judul" href="Publication.html" style="--i: 4">
+                        <div><img class="box--icon" src="Assets/publication.png" /></div>
+                        <p class="box--tulisan">Publications</p>
+                    </a>
+                </li>
+                <li class="box--iconmenu">
+                    <a class="box--judul" href="Group.html" style="--i: 5">
+                        <div><img class="box--icon" src="Assets/group.png" /></div>
+                        <p class="box--tulisan">Group Meetings</p>
+                    </a>
+                </li>
             </ul>
         </nav>
-        
-        <!-- Tombol Toggle Menu Hamburger -->
+
         <div class="hamburger-menu" onclick="toggleMenu()">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -114,10 +138,6 @@
             </ul>
         </div>
 
-        <!-- Tombol Login -->
-        <a href="login.html">
-            <div class="box--btn"></div>
-        </a>
     </main>
 
     <!-- JavaScript -->

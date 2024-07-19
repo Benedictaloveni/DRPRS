@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 html, body {
   min-height: 100vh;
@@ -52,6 +52,7 @@ body {
   opacity: 0;
   animation: slideRight 2s ease forwards;
 }
+
 
 .box--logo {
   display: flex;
@@ -123,6 +124,7 @@ body {
   background-color: #ffffff;
   color: #555;
 }
+
 .dropdown-content a img {
   margin-right: 5px; /* Jarak antara ikon gambar dan teks */
 }
@@ -171,6 +173,18 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.center-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.center-text h1 {
+  margin: 0;
+  font-size: 2em; /* Ubah angka ini untuk memperbesar teks */
+  color: #555; /* Ganti dengan warna teks yang diinginkan */
+  font-weight: normal; /* Atur font-weight ke normal */
+}
+
 .box--footer {
   background-color: #9D1414;
   background-image: url('Assets/bgnav.png');
@@ -185,19 +199,6 @@ body {
   font-size: 0.8em; /* Ukuran font default */
   height: 20px; /* Tinggi default */
 }
-
-.center-text {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.center-text h1 {
-  margin: 0;
-  font-size: 2em; /* Ubah angka ini untuk memperbesar teks */
-  color: #555; /* Ganti dengan warna teks yang diinginkan */
-  font-weight: normal; /* Atur font-weight ke normal */
-}
-
 
 /* Keyframe animations */
 @keyframes slideRight {
@@ -240,32 +241,6 @@ body {
     margin-left: 0;
     opacity: 0;
     animation: slideRight 2s ease forwards;
-  }
-
-  .description {
-    margin: 20px;
-    text-align: justify;
-  }
-  
-  .content-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .left-column,
-  .right-column {
-    flex: none;
-    width: 100%;
-  }
-
-  .unpad-logo {
-    width: 150px;
-    margin: 0 auto;
-  }
-
-  .main-title,
-  .sub-title {
-    text-align: center;
   }
 
   .box--subnavigasi {
@@ -337,64 +312,6 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .description {
-    margin: 0 75px;
-  }
-}
-.profile-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.profile-box {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  background: #ffffff;
-  border-radius: 10px;
-  margin: 20px 0;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.profile-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 0;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
-.profile-content {
-  flex-grow: 1;
-}
-
-.profile-content h2 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #555;
-}
-
-.profile-content p {
-  margin: 5px 0;
-  color: #555;
-}
-
-.profile-content a {
-  color: #555;
-  text-decoration: none;
-}
-
-.profile-content a:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 414px) {
@@ -402,11 +319,6 @@ body {
     padding: 5px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
     font-size: 0.6em; /* Ukuran font lebih kecil */
     height: 30px; /* Tinggi lebih kecil */
-  }
-  
-  .box--logo img {
-    height: 40px; /* Sesuaikan tinggi logo jika diperlukan */
-    margin: 0 0 0 20px; /* Sesuaikan margin jika diperlukan */
   }
 
   .box--logo {

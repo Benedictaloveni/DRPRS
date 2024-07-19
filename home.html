@@ -4,47 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!-- Judul Halaman -->
     <title>DRPRS</title>
-
-    <!-- Fonts -->
     <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    
-     <!-- Mengarahkan ke Halaman Login Saat Kunjungan Pertama -->
-    <script>
-        // Redirect to login page on first visit
-        if (!sessionStorage.getItem('visited')) {
-            sessionStorage.setItem('visited', true);
-            window.location.href = 'login.html';
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main>
-
-        <!-- Mulai Header -->
         <header class="box--header">
             <div class="box--logo">
                 <img src="Assets/logo.png" alt="Logo">
             </div>
 
-            <!-- Navigasi Menu -->
             <nav class="box--navigasi">
                 <ul class="box--subnavigasi">
                     <li class="box--iconmenu">
-                        <a class="box--judul" href="login.html" style="--i: 1">
+                        <a class="box--judul" href="home.html" style="--i: 1">
                             <div><img class="box--icon" src="Assets/Home.png" /></div>
                             <p class="box--tulisan">Home</p>
                         </a>
                     </li>
-                    <li class="box--iconmenu">
-                        <a class="box--judul" href="Research.html" style="--i: 1">
+                    <li class="box--iconmenu dropdown">
+                        <a class="box--judul" href="Research.html" onclick="toggleDropdown(event, 'research-dropdown')" style="--i: 1">
                             <div><img class="box--icon" src="Assets/Research.png" /></div>
-                            <p class="box--tulisan">Research</p>
+                            <p class="box--tulisan">Research <span class="arrow">&#9660;</span></p>
                         </a>
+                        <ul id="research-dropdown" class="dropdown-content">
+                            <a href="aResearch.html">Option A</a>
+                            <a href="bResearch.html">Option B</a>
+                        </ul>
+                    </li>
+                    <li class="box--iconmenu dropdown">
+                        <a class="box--judul" href="Software.html" onclick="toggleDropdown(event, 'software-dropdown')" style="--i: 2">
+                            <div><img class="box--icon" src="Assets/software.png" /></div>
+                            <p class="box--tulisan">Software <span class="arrow">&#9660;</span></p>
+                        </a>
+                        <ul id="software-dropdown" class="dropdown-content">
+                            <a href="aSoftware.html">Option A</a>
+                            <a href="bSoftware.html">Option B</a>
+                        </ul>
                     </li>
                     <li class="box--iconmenu">
                         <a class="box--judul" href="Profile.html" style="--i: 2">
@@ -52,63 +50,67 @@
                             <p class="box--tulisan">Profile</p>
                         </a>
                     </li>
+                    <li class="box--iconmenu">
+                        <a class="box--judul" href="News.html" style="--i: 3">
+                            <div><img class="box--icon" src="Assets/news.png" /></div>
+                            <p class="box--tulisan">News Archive</p>
+                        </a>
+                    </li>
+                    <li class="box--iconmenu">
+                        <a class="box--judul" href="Publication.html" style="--i: 4">
+                            <div><img class="box--icon" src="Assets/publication.png" /></div>
+                            <p class="box--tulisan">Publications</p>
+                        </a>
+                    </li>
+                    <li class="box--iconmenu">
+                        <a class="box--judul" href="Group.html" style="--i: 5">
+                            <div><img class="box--icon" src="Assets/group.png" /></div>
+                            <p class="box--tulisan">Group Meetings</p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
-            <!-- Toggle Menu -->
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-
         </header>
 
-        <!-- Hero Section -->
-        <div class="box--hero">
-            <div class="box--overlay">
-                <div class="box--text-content">
-                    <h1 class="box--text-setting" style="--m: 1">
-                        <ul class="box--baris1">
-                            <li class="box--TEXT1">Digital</li>
-                            <li class="box--TEXT2">Rock Physics</li>
-                        </ul>
-                    </h1>
-                    <h1 class="box--text-setting" style="--m: 2">
-                        <ul class="box--baris2">
-                            <li class="box--TEXT1">And</li>
-                            <li class="box--TEXT2">Remote Sensing</li>
-                        </ul>
-                    </h1>
-
-                    <div class="welcome-box">
-                        <h1>Welcome to Our Website!</h1>
-                    </div>
-
-                    <h2 class="box--additional-text">
-                        This platform serves as a comprehensive repository of research data and projects conducted by students in the field of rock physics and remote sensing. Here, you can explore various topics and learn about innovative methods and findings.
-                    </h2>
-
-                    <a href="login.html">
-                        <div class="box--btn"></div>
-                    </a>
-                </div>
+        <div class="content-section">
+            <div class="left-column">
+                <img src="Assets/unpad.png" alt="Unpad Logo" class="unpad-logo">
+            </div>
+            <div class="right-column">
+                <h1 class="main-title">Digital Rock Physics And Remote Sensing</h1>
+                <h2 class="sub-title">Supervisor: Dr. Irwan Ary Dharmawan, M.Si.</h2>
             </div>
         </div>
 
-        <!-- Mascot Section -->
-        <div class="box--mascot">
-            <img src="Assets/mascot.png" alt="Mascot" class="box--mascot-image">
+        <div class="description">
+            <p>This platform is a dedicated hub for research and projects in the field of digital rock physics and remote sensing, carried out by students. It provides a detailed overview of various studies and innovations in these areas, offering insights into how advanced technologies and methods are applied to understand rock properties and monitor environmental changes. Users can explore comprehensive data, methodologies, and findings, all contributed by the student researchers involved in these cutting-edge fields.</p>
+        </div>
+
+        <p class="recent-news">Recent News:</p>
+        <ul class="news-list">
+            <li>News Number One</li>
+            <li>News Number Two</li>
+            <li>News Number Three</li>
+            <li>News Number Four</li>
+        </ul>
+
+        <div class="box--btn">
+            <a href="home.html"></a>
         </div>
     </main>
+
+    <footer class="box--footer">
+        <p>Copyright © 2024 Department of Geophysics FMIPA Unpad</p>
+    </footer>
+
+    <script src="home.js"></script>
 </body>
 
-<!-- Footer -->
-<footer class="box--footer">
-    <p>Copyright © 2024 Department of Geophysics FMIPA Unpad</p>
-</footer>
-
-<!-- JavaScript -->
-<script src="home.js"></script>
-
 </html>
+
