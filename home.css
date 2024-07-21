@@ -188,13 +188,6 @@ body {
   height: 20px; /* Tinggi default */
 }
 
-.content-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-  padding: 0 50px;
-}
 
 .left-column {
   flex: 1;
@@ -202,14 +195,6 @@ body {
 
 .right-column {
   flex: 2;
-}
-
-.unpad-logo {
-  width: 150px;
-  height: auto;
-  opacity: 0;
-  animation: slideLeft 1.5s ease forwards;
-  margin-left: 100px;
 }
 
 .main-title {

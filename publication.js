@@ -1,3 +1,4 @@
+
 // Menyimpan Status Menu Navigasi
 let isOpen = false;
 
@@ -39,7 +40,7 @@ function toggleMenu() {
 // Fungsi untuk mengambil data dari JSON dan memuat tabel 
 async function getDataAndPopulateTable() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/YoevitaEmeliana/DRPRS/main/Research.json');
+        const response = await fetch('ResearchPublication.json');
         const data = await response.json();
         allData = data.slice(1);
         filteredData = allData;

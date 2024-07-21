@@ -132,6 +132,7 @@ body {
   display: block;
 }
 
+
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -367,7 +368,7 @@ body {
 
 .profile-img {
   width: 150px;
-  height: 150px;
+  height: 220px;
   border-radius: 0;
   object-fit: cover;
   margin-right: 20px;

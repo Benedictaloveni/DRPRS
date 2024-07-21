@@ -1,0 +1,99 @@
+[
+    {
+        "string_field_0": "0",
+        "string_field_1": "0",
+        "string_field_2": "0",
+        "string_field_3": "0"
+      },
+
+      {
+        "string_field_0": "1",
+        "string_field_1": "IA Dharmawan",
+        "string_field_2": "2000",
+        "string_field_3": "<a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lyDFLnQAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=lyDFLnQAAAAJ:zYLM7Y9cAGgC' target='_blank'>Simulasi Automata Gas-Kisi Untuk Aliran Fluida Dua Dimensi</a>"
+      },{
+        "string_field_0": "2",
+        "string_field_1": "A Bahtiar, IA Dharmawan",
+        "string_field_2": "2007",
+        "string_field_3": "<a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lyDFLnQAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=lyDFLnQAAAAJ:IjCSPb-OGe4C' target='_blank'>Matrix transfer and coupled mode equation for nonlinear photonic band gap as optical signal processing</a>"
+      },
+      {
+        "string_field_0": "3",
+        "string_field_1": "A Bahtiar, Y Yuliah, IA Dharmawan",
+        "string_field_2": "2007",
+        "string_field_3": "<a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lyDFLnQAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=lyDFLnQAAAAJ:iH-uZ7U-co4C' target='_blank'>Nonlinear Photonic Crystal for All-optical Switching Appli</a>"
+      },
+      {
+        "string_field_0": "4",
+        "string_field_1": "IA Dharmawan, HR Agustina, M Komariah",
+        "string_field_2": "2009",
+        "string_field_3": "<a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lyDFLnQAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=lyDFLnQAAAAJ:NMxIlDl6LWMC' target='_blank'>Gelombang dan Aplikasinya</a>"
+      },
+      {
+        "string_field_0": "5",
+        "string_field_1": "渡邊功雄， 富剛佑岐， 和気剛， 田畑吉計， 中村裕之",
+        "string_field_2": "2011",
+        "string_field_3": "<a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lyDFLnQAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=lyDFLnQAAAAJ:d1gkVwhDpl0C' target='_blank'>22pGP-15 μSR で見る V_4S_9Br_4 のスピン構造 (22pGP 量子スビン系 (一次元・クラスター系), 領域 3 (磁性, 磁気共鳴))</a>"
+      },
+    {      
+      "string_field_0": "6",
+      "string_field_1": "渡邊功雄， 富岡佑岐， 和氣剛， 田畑吉計， 中村裕之",
+      "string_field_2": "2011",
+      "string_field_3": "27pHF-9 μSR で見る 4 核バナジウムクラスター化合物 V_4S_9Br_4 の磁性 (27pHF 量子スピン系 (一次元系・クラスター系および一般), 領域 3 (磁性, 磁気共鳴))"
+    },
+    {
+      "string_field_0": "7",
+      "string_field_1": "IARY DHARMAWAN, D FITRIANI, K SUSANTO, WP YUDISTIAWAN",
+      "string_field_2": "2011",
+      "string_field_3": "SIMULASI LATTICE BOLTZMANN UNTUK MENENTUKAN KONSENTRASI POLARISASI PADA SOLID OXIDE FUEL CELL"
+    },
+    {
+      "string_field_0": "8",
+      "string_field_1": "Budi Adipedana, Irwan A Dharmawan, Rustam Siregar, I Watanabe, Robert Scheuermann, Kamil Sedlak, Y Tomioka, T Waki, Y Tabata, H Nakamura",
+      "string_field_2": "2011",
+      "string_field_3": "27pHF-9 μSR Study on the magnetism of a tetranuclear vanadium compound, V_4S_9Br_4"
+    },
+    {
+      "string_field_0": "9",
+      "string_field_1": "Budi Adipedana, Irwan A Dharmawan, Rustam E Siregar, I Watanabe, Robert Scheuermann, Kamil Sedlak, Y Tomioka, T Waki, Y Tabata, H Nakamura",
+      "string_field_2": "2011",
+      "string_field_3": "22pGP-15 Spin Structure of V_4S_9Br_4 Estimated from μSR"
+    },
+    {
+      "string_field_0": "10",
+      "string_field_1": "B Adiperdana, IA Dharmawan, RE Siregar, I Watanabe, K Ohishi, Y Ishii, T Suzuki, T Kawamata, R Scheuermann, K Sedlak, Y Tomioka, T Waki, Y Tabata, H Nakamura",
+      "string_field_2": "2012",
+      "string_field_3": "Muon Sites Estimation in La2Cu04 and A New Vanadium Cluster Compound, V4S9Br4, using Electronic and Nuclear Dipole Field Calculations"
+    },
+    {
+      "string_field_0": "11",
+      "string_field_1": "AN Hakim, IA Dharmawan",
+      "string_field_2": "2012",
+      "string_field_3": "Model Aliran Polimer pada Media Berpori"
+    },
+    {
+      "string_field_0": "12",
+      "string_field_1": "B Adiperdana, DIA, S RE, I Kawasaki, I Watanabe",
+      "string_field_2": "2012",
+      "string_field_3": "21pGB-1 Reinvestigation of the muon sites in La_2CuO_4 using dipole field and ab-initio calculation"
+    },
+    {
+      "string_field_0": "13",
+      "string_field_1": "AO Maulana, R Tasomara, S Harimurty, RS Pasaribu, H Mujahidin, G Nurrohman, M Kartawidjaja, B Adiperdana, IA Dharmawan, IM Joni",
+      "string_field_2": "2013",
+      "string_field_3": "The Study of Characteristics of Ceramic Thermistor FeNixMn2-xO4"
+    },
+    {
+      "string_field_0": "14",
+      "string_field_1": "M Aufaristama, IA Dharmawan, AN Hakim, A Lesmana, F Tiffanny",
+      "string_field_2": "2013",
+      "string_field_3": "Simulation of Polymer Xanthan Gum Flow Through Synthetic Fracture using Lattice Boltzmann Method"
+    },
+    {
+      "string_field_0": "15",
+      "string_field_1": "Budi Adiperdana, Irwan Ary Dharmawan, Shukri Sulaiman, Mohamad Ismail MI, Hanjie Guo, Kazuyuki Matsuhira, Makoto Wakeshima, Yukio Hinatsu, Ikuto Kawasaki, Isao Watanabe",
+      "string_field_2": "2013",
+      "string_field_3": "29aXA-9 Muon site determination on Nd_2Ir_2O_7 using dipole field and ab-initio calculation"
+    }
+  ]
+  
