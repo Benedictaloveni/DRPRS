@@ -67,6 +67,7 @@ body {
   border: 1px solid transparent;
   padding-left: 20px;
   padding-right: 20px;
+  white-space: nowrap;
 }
 
 .box--subnavigasi {
@@ -106,8 +107,8 @@ body {
   min-width: 80px;
   box-shadow: 0px 8px 16px 0px #00000033;
   z-index: 1;
-  text-align: center;
-  padding: 0;
+  text-align: left;
+  padding: 10px;
   top: 45px;
   right: 0;
 }
@@ -185,6 +186,43 @@ body {
   font-weight: normal; /* Atur font-weight ke normal */
 }
 
+/* CSS for the additional text section */
+.additional-text {
+    margin: 20px; /* Adjust margin as needed */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+  }
+  
+  .additional-text p {
+    margin: 0; /* Remove default margins */
+    font-size: 1em; /* Standard font size */
+    color: #333; /* Dark text color for readability */
+  }
+  
+  .additional-text p + p {
+    margin-top: 10px; /* Space between paragraphs, adjust as needed */
+  }
+  
+  .additional-text a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .additional-text a:hover {
+    text-decoration: underline; /* Underline link on hover */
+  }
+  
+  .centered-image {
+    max-width: 50%; /* Adjust as needed; makes image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 0 10px; /* Space below the image, adjust as needed */
+  }
+  
+
+  
 .box--footer {
   background-color: #9D1414;
   background-image: url('Assets/bgnav.png');
@@ -260,6 +298,15 @@ body {
     display: flex;
   }
 
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
   .box--subnavigasi li {
     width: 100%; /* Pastikan elemen li mengisi lebar penuh */
     display: flex; /* Flexbox untuk mengatur ikon dan teks */
@@ -312,6 +359,10 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .dropdown-content {
+    top: 0;
+    right: 100%;
+    }
 }
 
 @media (max-width: 414px) {
@@ -336,4 +387,18 @@ body {
     height: 25px; /* Tinggi lebih kecil untuk logo */
     margin: 0;
   }
+
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-content {
+    top: 0;
+    right: 100%;
+    }
 }

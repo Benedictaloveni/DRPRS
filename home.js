@@ -1,3 +1,4 @@
+// Toggle menu
 let isOpen = false;
 
 function toggleMenu() {
@@ -18,7 +19,67 @@ document.addEventListener('click', function(event) {
         nav.classList.remove('show');    // Sembunyikan menu dropdown
         hamburger.classList.remove('active'); // Nonaktifkan animasi ikon hamburger
         isOpen = false;
-    }
-
-    
+    } 
 });
+
+let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.news-slide');
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    const offset = -currentSlide * 100;
+    document.querySelector('.news-slider').style.transform = `translateX(${offset}%)`;
+}
+
+function nextNews() {
+    showSlide(currentSlide + 1);
+}
+
+function prevNews() {
+    showSlide(currentSlide - 1);
+}
+
+// Initialize the slider
+showSlide(currentSlide);
+
+// Function to start the automatic slideshow
+function startAutoSlide() {
+    setInterval(() => {
+        nextNews();
+    }, 5000); // Change slide every 5 seconds
+}
+
+// Start the automatic slideshow
+startAutoSlide();
+
+function toggleDropdown(event, dropdownId) {
+    event.preventDefault();
+    var dropdown = document.getElementById(dropdownId);
+    var arrow = event.currentTarget.querySelector('.arrow');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)'; // Reset arrow direction
+    } else {
+        dropdown.style.display = 'block';
+        arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
+    }
+}
+
+function toggleDropdown(event, dropdownId) {
+    event.preventDefault();
+    var dropdown = document.getElementById(dropdownId);
+    var arrow = event.currentTarget.querySelector('.arrow');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)'; // Reset arrow direction
+    } else {
+        dropdown.style.display = 'block';
+        arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
+    }
+}

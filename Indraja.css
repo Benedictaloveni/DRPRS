@@ -130,14 +130,6 @@ body {
   margin-right: 5px; /* Jarak antara ikon gambar dan teks */
 }
 
-.box--iconmenu:hover .arrow {
-  transform: rotate(-270deg); /* Rotate arrow */
-}
-
-.arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
 
 .box--iconmenu:hover .dropdown-content {
   display: block;
@@ -194,6 +186,50 @@ body {
   font-weight: normal; /* Atur font-weight ke normal */
 }
 
+/* CSS for the additional text section */
+.additional-text {
+    margin: 20px; /* Adjust margin as needed */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+  }
+  
+  .additional-text p {
+    margin: 0; /* Remove default margins */
+    font-size: 1em; /* Standard font size */
+    color: #333; /* Dark text color for readability */
+  }
+  
+  .additional-text p + p {
+    margin-top: 10px; /* Space between paragraphs, adjust as needed */
+  }
+  
+  .additional-text a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .additional-text a:hover {
+    text-decoration: underline; /* Underline link on hover */
+  }
+  
+  .centered-image {
+    max-width: 50%; /* Adjust as needed; makes image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 0 10px; /* Space below the image, adjust as needed */
+  }
+  
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
 .box--footer {
   background-color: #9D1414;
   background-image: url('Assets/bgnav.png');
@@ -325,7 +361,6 @@ body {
     top: 0;
     right: 100%;
     }
-
 }
 
 @media (max-width: 414px) {

@@ -23,7 +23,15 @@ document.addEventListener('click', function(event) {
     
 });
 
-
-
-
-
+function toggleDropdown(event, dropdownId) {
+    event.preventDefault();
+    var dropdown = document.getElementById(dropdownId);
+    var arrow = event.currentTarget.querySelector('.arrow');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)'; // Reset arrow direction
+    } else {
+        dropdown.style.display = 'block';
+        arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
+    }
+}

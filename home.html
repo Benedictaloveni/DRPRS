@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +7,12 @@
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <main>
         <header class="box--header">
             <div class="box--logo">
                 <img src="Assets/logo.png" alt="Logo">
             </div>
-
             <nav class="box--navigasi">
                 <ul class="box--subnavigasi">
                     <li class="box--iconmenu">
@@ -24,53 +21,54 @@
                             <p class="box--tulisan">Home</p>
                         </a>
                     </li>
-                    <li class="box--iconmenu dropdown">
-                        <a class="box--judul" href="Research.html" onclick="toggleDropdown(event, 'research-dropdown')" style="--i: 1">
-                            <div><img class="box--icon" src="Assets/Research.png" /></div>
-                            <p class="box--tulisan">Research <span class="arrow">&#9660;</span></p>
-                        </a>
-                        <ul id="research-dropdown" class="dropdown-content">
-                            <a href="aResearch.html">Option A</a>
-                            <a href="bResearch.html">Option B</a>
-                        </ul>
-                    </li>
-                    <li class="box--iconmenu dropdown">
-                        <a class="box--judul" href="Software.html" onclick="toggleDropdown(event, 'software-dropdown')" style="--i: 2">
-                            <div><img class="box--icon" src="Assets/software.png" /></div>
-                            <p class="box--tulisan">Software <span class="arrow">&#9660;</span></p>
-                        </a>
-                        <ul id="software-dropdown" class="dropdown-content">
-                            <a href="aSoftware.html">Option A</a>
-                            <a href="bSoftware.html">Option B</a>
-                        </ul>
-                    </li>
                     <li class="box--iconmenu">
                         <a class="box--judul" href="Profile.html" style="--i: 2">
                             <div><img class="box--icon" src="Assets/Profile.png" /></div>
                             <p class="box--tulisan">Profile</p>
                         </a>
                     </li>
+                    <li class="box--iconmenu dropdown">
+                        <a class="box--judul" href="Research.html" onclick="toggleDropdown(event, 'research-dropdown')" style="--i: 3">
+                            <div><img class="box--icon" src="Assets/Research.png" /></div>
+                            <p class="box--tulisan">Research <span class="arrow">⏷</span></p>
+                        </a>
+                        <ul id="research-dropdown" class="dropdown-content">
+                            <a href="Publication.html">Publications</a>
+                            <a href="bResearch.html">Option B</a>
+                        </ul>
+                    </li>
+                    <li class="box--iconmenu dropdown">
+                        <a class="box--judul" href="Software.html" onclick="toggleDropdown(event, 'software-dropdown')" style="--i: 4">
+                            <div><img class="box--icon" src="Assets/software.png" /></div>
+                            <p class="box--tulisan">Software <span class="arrow">⏷</span></p>
+                        </a>
+                        <ul id="software-dropdown" class="dropdown-content">
+                            <a href="Indraja.html">Indraja Buana</a>
+                            <a href="Pajabat.html">Pajabat</a>
+                            <a href="Presitas.html">Presitas</a>
+                            <a href="Mata.html">MataBDG</a>
+                        </ul>
+                    </li>
                     <li class="box--iconmenu">
-                        <a class="box--judul" href="News.html" style="--i: 3">
+                        <a class="box--judul" href="News.html" style="--i: 5">
                             <div><img class="box--icon" src="Assets/news.png" /></div>
                             <p class="box--tulisan">News Archive</p>
                         </a>
                     </li>
                     <li class="box--iconmenu">
-                        <a class="box--judul" href="Publication.html" style="--i: 4">
-                            <div><img class="box--icon" src="Assets/publication.png" /></div>
-                            <p class="box--tulisan">Publications</p>
+                        <a class="box--judul" href="Open.html" style="--i: 6">
+                            <div><img class="box--icon" src="Assets/open.png" /></div>
+                            <p class="box--tulisan">Open Positions</p>
                         </a>
                     </li>
                     <li class="box--iconmenu">
-                        <a class="box--judul" href="Group.html" style="--i: 5">
+                        <a class="box--judul" href="Group.html" style="--i: 7">
                             <div><img class="box--icon" src="Assets/group.png" /></div>
                             <p class="box--tulisan">Group Meetings</p>
                         </a>
                     </li>
                 </ul>
             </nav>
-
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -78,34 +76,61 @@
             </div>
         </header>
 
-            <div class="right-column">
-                <h1 class="main-title">Digital Rock Physics And Remote Sensing</h1>
-                <h2 class="sub-title">Supervisor: Dr. Irwan Ary Dharmawan, M.Si.</h2>
+        <section class="news-section">
+            <div class="news-nav">
+                <div class="news-nav">
+                    <button class="nav-button prev-news" onclick="prevNews()">⮜</button> <!-- Chevron Left Arrow -->
+                    <button class="nav-button next-news" onclick="nextNews()">⮞</button> <!-- Chevron Right Arrow -->
+                  </div>
             </div>
-        </div>
+            <div class="news-slider-container">
+              <div class="news-slider">
+                <div class="news-slide">
+                  <div class="news-content">
+                    <h3>News Article One</h3>
+                    <p class="news-summary">Summary of the first news article.</p>
+                  </div>
+                  <img src="Assets/SP.jpg" alt="News Image 1" class="news-image">
+                </div>
+                <div class="news-slide">
+                  <div class="news-content">
+                    <h3>News Article Two</h3>
+                    <p class="news-summary">Summary of the second news article.</p>
+                  </div>
+                  <img src="Assets/SPP.jpg" alt="News Image 2" class="news-image">
+                </div>
+                <div class="news-slide">
+                  <div class="news-content">
+                    <h3>News Article Three</h3>
+                    <p class="news-summary">Summary of the third news article.</p>
+                  </div>
+                  <img src="Assets/SPP2.jpg" alt="News Image 3" class="news-image">
+                </div>
+                <div class="news-slide">
+                  <div class="news-content">
+                    <h3>News Article Four</h3>
+                    <p class="news-summary">Summary of the fourth news article.</p>
+                  </div>
+                  <img src="Assets/SP.jpg" alt="News Image 4" class="news-image">
+                </div>
+                <div class="news-slide">
+                  <div class="news-content">
+                    <h3>News Article Five</h3>
+                    <p class="news-summary">Summary of the fifth news article.</p>
+                  </div>
+                  <img src="Assets/SPP.jpg" alt="News Image 5" class="news-image">
+                </div>
+              </div>
+            </div>
+          </section>
+          
 
-        <div class="description">
-            <p>This platform is a dedicated hub for research and projects in the field of digital rock physics and remote sensing, carried out by students. It provides a detailed overview of various studies and innovations in these areas, offering insights into how advanced technologies and methods are applied to understand rock properties and monitor environmental changes. Users can explore comprehensive data, methodologies, and findings, all contributed by the student researchers involved in these cutting-edge fields.</p>
-        </div>
-
-        <p class="recent-news">Recent News:</p>
-        <ul class="news-list">
-            <li>News Number One</li>
-            <li>News Number Two</li>
-            <li>News Number Three</li>
-            <li>News Number Four</li>
-            <li>News Number One</li>
-            <li>News Number Two</li>
-            <li>News Number Three</li>
-            <li>News Number Four</li>
-            <li>News Number One</li>
-            <li>News Number Two</li>
-            <li>News Number Three</li>
-            <li>News Number Four</li>
-        </ul>
-
-        <div class="box--btn">
-            <a href="home.html"></a>
+        <div class="main-content">
+            <h1 class="main-title">Digital Rock Physics And Remote Sensing</h1>
+            <h2 class="sub-title">Supervisor: Dr. Irwan Ary Dharmawan, M.Si.</h2>
+            <div class="description">
+                <p>This platform is a dedicated hub for research and projects in the field of digital rock physics and remote sensing, carried out by students. It provides a detailed overview of various studies and innovations in these areas, offering insights into how advanced technologies and methods are applied to understand rock properties and monitor environmental changes. Users can explore comprehensive data, methodologies, and findings, all contributed by the student researchers involved in these cutting-edge fields.</p>
+            </div>
         </div>
     </main>
 
@@ -115,6 +140,4 @@
 
     <script src="home.js"></script>
 </body>
-
 </html>
-
