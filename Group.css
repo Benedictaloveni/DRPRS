@@ -130,19 +130,6 @@ body {
   margin-right: 5px; /* Jarak antara ikon gambar dan teks */
 }
 
-.box--iconmenu:hover .arrow {
-  transform: rotate(-270deg); /* Rotate arrow */
-}
-
-.arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.box--iconmenu:hover .dropdown-content {
-  display: block;
-}
-
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -326,6 +313,19 @@ body {
     top: 0;
     right: 100%;
     }
+
+    .box--iconmenu:hover .arrow {
+      transform: rotate(-270deg); /* Rotate arrow */
+    }
+    
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    
+    .box--iconmenu:hover .dropdown-content {
+      display: block;
+    }
 }
 
 @media (max-width: 414px) {
@@ -335,6 +335,19 @@ body {
     height: 30px; /* Tinggi lebih kecil */
   }
 
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
+  }
+  
   .box--logo {
     height: 50px;
     margin-left: 0;

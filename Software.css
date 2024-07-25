@@ -131,19 +131,6 @@ body {
 }
 
 
-.box--iconmenu:hover .dropdown-content {
-  display: block;
-}
-
-.box--iconmenu:hover .arrow {
-  transform: rotate(-270deg); /* Rotate arrow */
-}
-
-.arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -325,6 +312,19 @@ body {
     top: 0;
     right: 100%;
     }
+
+    .box--iconmenu:hover .arrow {
+      transform: rotate(-270deg); /* Rotate arrow */
+    }
+    
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    
+    .box--iconmenu:hover .dropdown-content {
+      display: block;
+    }
 }
 
 @media (max-width: 414px) {
@@ -332,6 +332,19 @@ body {
     padding: 5px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
     font-size: 0.6em; /* Ukuran font lebih kecil */
     height: 30px; /* Tinggi lebih kecil */
+  }
+
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
   }
 
   .box--logo {

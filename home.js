@@ -22,64 +22,69 @@ document.addEventListener('click', function(event) {
     } 
 });
 
-let currentSlide = 0;
+let currentPage = 1;
+const totalPages = 3; // Adjust this according to the number of pages you have
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.news-slide');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+function updatePagination() {
+  const pageNumbersContainer = document.getElementById('page-numbers');
+  
+  // Clear existing page numbers
+  pageNumbersContainer.innerHTML = '';
+
+  // Create page numbers
+  for (let i = 1; i <= totalPages; i++) {
+    const pageNumber = document.createElement('span');
+    pageNumber.textContent = i;
+    pageNumber.onclick = () => goToPage(i);
+    if (i === currentPage) {
+      pageNumber.classList.add('active');
     }
-    const offset = -currentSlide * 100;
-    document.querySelector('.news-slider').style.transform = `translateX(${offset}%)`;
+    pageNumbersContainer.appendChild(pageNumber);
+  }
 }
 
-function nextNews() {
-    showSlide(currentSlide + 1);
+function goToPage(page) {
+  currentPage = page;
+  updatePagination();
+  showPage(currentPage); // Show content for the selected page
 }
 
-function prevNews() {
-    showSlide(currentSlide - 1);
+function showPage(page) {
+  const items = document.querySelectorAll('.news-item');
+  items.forEach(item => {
+    item.style.display = item.getAttribute('data-page') == page ? 'block' : 'none';
+  });
 }
 
-// Initialize the slider
-showSlide(currentSlide);
-
-// Function to start the automatic slideshow
-function startAutoSlide() {
-    setInterval(() => {
-        nextNews();
-    }, 5000); // Change slide every 5 seconds
+function firstPage() {
+  currentPage = 1;
+  updatePagination();
+  showPage(currentPage);
 }
 
-// Start the automatic slideshow
-startAutoSlide();
-
-function toggleDropdown(event, dropdownId) {
-    event.preventDefault();
-    var dropdown = document.getElementById(dropdownId);
-    var arrow = event.currentTarget.querySelector('.arrow');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-        arrow.style.transform = 'rotate(0deg)'; // Reset arrow direction
-    } else {
-        dropdown.style.display = 'block';
-        arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
-    }
+function previousPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    updatePagination();
+    showPage(currentPage);
+  }
 }
 
-function toggleDropdown(event, dropdownId) {
-    event.preventDefault();
-    var dropdown = document.getElementById(dropdownId);
-    var arrow = event.currentTarget.querySelector('.arrow');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-        arrow.style.transform = 'rotate(0deg)'; // Reset arrow direction
-    } else {
-        dropdown.style.display = 'block';
-        arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
-    }
+function nextPage() {
+  if (currentPage < totalPages) {
+    currentPage++;
+    updatePagination();
+    showPage(currentPage);
+  }
 }
+
+function lastPage() {
+  currentPage = totalPages;
+  updatePagination();
+  showPage(currentPage);
+}
+
+// Initialize pagination and show content for the first page
+updatePagination();
+showPage(currentPage);
+

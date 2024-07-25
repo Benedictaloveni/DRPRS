@@ -1,4 +1,3 @@
-
 // Menyimpan Status Menu Navigasi
 let isOpen = false;
 
@@ -177,4 +176,24 @@ function toggleDropdown(event, dropdownId) {
         dropdown.style.display = 'block';
         arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
     }
+}
+
+function sortTable(columnIndex, order) {
+    const table = document.querySelector('table');
+    const rows = Array.from(table.querySelectorAll('tbody tr'));
+    
+    rows.sort((rowA, rowB) => {
+        const cellA = rowA.children[columnIndex].textContent.trim();
+        const cellB = rowB.children[columnIndex].textContent.trim();
+
+        if (order === 'asc') {
+            return cellA.localeCompare(cellB, undefined, { numeric: true });
+        } else {
+            return cellB.localeCompare(cellA, undefined, { numeric: true });
+        }
+    });
+
+    // Append sorted rows to the table body
+    const tbody = table.querySelector('tbody');
+    rows.forEach(row => tbody.appendChild(row));
 }

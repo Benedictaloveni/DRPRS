@@ -135,14 +135,6 @@ body {
   display: block;
 }
 
-.box--iconmenu:hover .arrow {
-  transform: rotate(-270deg); /* Rotate arrow */
-}
-
-.arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
 
 .hamburger-menu {
   display: none;
@@ -223,6 +215,15 @@ body {
   min-height: 500px;
 }
 
+.no-container {
+  width: 100px; /* Atur lebar untuk kolom No */
+}
+
+.year-container {
+  width: 120px; /* Atur lebar untuk kolom Tahun */
+}
+
+
 .table-controls {
   display: flex;
   justify-content: space-between; /* Posisikan elemen di sebelah kiri dan kanan */
@@ -257,6 +258,40 @@ body {
   border: none;
   cursor: pointer;
 }
+
+th {
+  position: relative; /* Menambahkan konteks posisi untuk anak elemen absolut */
+  text-align: center; /* Pusatkan teks header */
+}
+
+.sort-buttons {
+  position: absolute;
+  right: 20px; /* Memposisikan ke kanan */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the buttons */
+  display: flex;
+  flex-direction: column; /* Mengatur tombol dalam kolom vertikal */
+  align-items: center;
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  font-size: 0.7em;
+  cursor: pointer;
+  color: #fffcfc;
+  padding: 0;
+  margin: 0;
+}
+
+.sort-arrow {
+  font-size: 0.8em; /* Ukuran panah */
+  margin: 0; /* Menghapus margin default */
+}
+
+.sort-button:hover .sort-arrow {
+  color: #000; /* Warna panah saat hover */
+} 
 
 .entries-dropdown:hover {
   background-color: #9D1414; /* Ubah latar belakang saat dihover */
@@ -362,6 +397,19 @@ table td {
     padding: 8px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
     font-size: 0.75em; /* Ukuran font lebih kecil */
     height: 35px; /* Tinggi lebih kecil */
+  }
+
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
+  }
+  
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
   }
 
   .box--logo {
@@ -478,6 +526,19 @@ table td {
     padding: 5px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
     font-size: 0.6em; /* Ukuran font lebih kecil */
     height: 30px; /* Tinggi lebih kecil */
+  }
+
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
+  }
+  
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
   }
   
   .box--logo img {

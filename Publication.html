@@ -86,7 +86,7 @@
         <main>
             <!-- Judul Halaman -->
             <div class="center-text">
-                <h1>Publications</h1>
+                <h1>Publikasi</h1>
             </div>
             </main>
 
@@ -118,10 +118,42 @@
             <table>
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Name</th>
-                        <th>Year</th>
-                        <th>Research Title</th>
+                        <th>
+                            <div class="no-container">
+                                No
+                                <div class="sort-buttons">
+                                    <button class="sort-button" onclick="sortTable(0, 'asc')">▲</button>
+                                    <button class="sort-button" onclick="sortTable(0, 'desc')">▼</button>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="header-container">
+                                Nama
+                                <div class="sort-buttons">
+                                    <button class="sort-button" onclick="sortTable(1, 'asc')">▲</button>
+                                    <button class="sort-button" onclick="sortTable(1, 'desc')">▼</button>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="year-container">
+                                Tahun
+                                <div class="sort-buttons">
+                                    <button class="sort-button" onclick="sortTable(2, 'asc')">▲</button>
+                                    <button class="sort-button" onclick="sortTable(2, 'desc')">▼</button>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="header-container">
+                                Judul Penelitian
+                                <div class="sort-buttons">
+                                    <button class="sort-button" onclick="sortTable(3, 'asc')">▲</button>
+                                    <button class="sort-button" onclick="sortTable(3, 'desc')">▼</button>
+                                </div>
+                            </div>
+                        </th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">

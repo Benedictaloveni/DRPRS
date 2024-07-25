@@ -131,10 +131,6 @@ body {
 }
 
 
-.box--iconmenu:hover .dropdown-content {
-  display: block;
-}
-
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -221,14 +217,6 @@ body {
     margin: 0 0 10px; /* Space below the image, adjust as needed */
   }
   
-  .box--iconmenu:hover .arrow {
-    transform: rotate(-270deg); /* Rotate arrow */
-  }
-  
-  .arrow {
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
   
 .box--footer {
   background-color: #9D1414;
@@ -279,6 +267,19 @@ body {
     padding: 8px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
     font-size: 0.75em; /* Ukuran font lebih kecil */
     height: 35px; /* Tinggi lebih kecil */
+  }
+
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
   }
 
   .box--logo {
@@ -388,6 +389,16 @@ body {
 
   .box--iconmenu:hover .arrow {
     transform: rotate(-270deg); /* Rotate arrow */
+  }
+
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
   }
   
   .arrow {

@@ -130,11 +130,6 @@ body {
   margin-right: 5px; /* Jarak antara ikon gambar dan teks */
 }
 
-
-.box--iconmenu:hover .dropdown-content {
-  display: block;
-}
-
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -219,15 +214,6 @@ body {
     max-width: 50%; /* Adjust as needed; makes image responsive */
     height: auto; /* Maintain aspect ratio */
     margin: 0 0 10px; /* Space below the image, adjust as needed */
-  }
-  
-  .box--iconmenu:hover .arrow {
-    transform: rotate(-270deg); /* Rotate arrow */
-  }
-  
-  .arrow {
-    display: inline-block;
-    transition: transform 0.3s ease;
   }
   
 .box--footer {
@@ -361,6 +347,19 @@ body {
     top: 0;
     right: 100%;
     }
+
+    .box--iconmenu:hover .arrow {
+      transform: rotate(-270deg); /* Rotate arrow */
+    }
+    
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    
+    .box--iconmenu:hover .dropdown-content {
+      display: block;
+    }
 }
 
 @media (max-width: 414px) {
@@ -375,6 +374,19 @@ body {
     margin-left: 0;
     opacity: 0;
     animation: slideRight 2s ease forwards;
+  }
+
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
   }
   
   .box--icon {

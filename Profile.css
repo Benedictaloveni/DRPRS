@@ -128,32 +128,6 @@ body {
   margin-right: 5px; /* Jarak antara ikon gambar dan teks */
 }
 
-
-.box--iconmenu:hover .dropdown-content {
-  display: block;
-}
-
-.box--additional-text {
-  margin-left: 50px; /* Geser kontainer ke kanan dengan margin kiri */
-}
-
-.box--additional-text ul {
-  padding-left: 10px; /* Tambahkan padding kiri untuk isi daftar */
-}
-
-.box--additional-text li {
-  margin-left: 10px; /* Jika perlu, tambahkan margin kiri untuk elemen daftar */
-}
-
-.box--iconmenu:hover .arrow {
-  transform: rotate(-270deg); /* Rotate arrow */
-}
-
-.arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -220,6 +194,232 @@ body {
   font-weight: normal; /* Atur font-weight ke normal */
 }
 
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img {
+  width: 150px;
+  height: 220px;
+  border-radius: 0;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-content {
+  flex-grow: 1;
+}
+
+.profile-content h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #555;
+}
+
+.profile-content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.profile-content a {
+  color: #555;
+  text-decoration: none;
+}
+
+.profile-content a:hover {
+  text-decoration: underline;
+}
+
+.linkedin-logo {
+  width: 24px; /* Adjust the size as needed */
+  height: auto;
+  vertical-align: middle; /* Align the logo with text if necessary */
+}
+
+.section-title {
+  margin: 0;
+  font-size: 2em; /* Ubah angka ini untuk memperbesar teks */
+  color: #555; /* Ganti dengan warna teks yang diinginkan */
+  font-weight: normal; /* Atur font-weight ke normal */
+}
+
+th {
+  position: relative; /* Menambahkan konteks posisi untuk anak elemen absolut */
+  text-align: center; /* Pusatkan teks header */
+}
+
+.sort-buttons {
+  position: absolute;
+  right: 20px; /* Memposisikan ke kanan */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the buttons */
+  display: flex;
+  flex-direction: column; /* Mengatur tombol dalam kolom vertikal */
+  align-items: center;
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  font-size: 0.7em;
+  cursor: pointer;
+  color: #fffcfc;
+  padding: 0;
+  margin: 0;
+}
+
+.sort-arrow {
+    font-size: 0.8em; /* Ukuran panah */
+    margin: 0; /* Menghapus margin default */
+}
+
+.sort-button:hover .sort-arrow {
+    color: #000; /* Warna panah saat hover */
+}
+
+.table-container {
+  position: relative;
+  max-width: 80%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  text-align: center;
+  overflow-x: auto;
+  background-color: #fff; /* Background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  min-height: 400px;
+  align-items: center; /* Pastikan elemen dalam kontainer sejajar secara vertikal */
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between; /* Posisikan elemen di sebelah kiri dan kanan */
+  align-items: center;
+  margin-bottom: 10px; /* Atur margin bawah sesuai kebutuhan */
+}
+
+.search-input {
+  background-color: #fff; /* Ubah latar belakang menjadi putih */
+  color: #9D1414; /* Warna teks tetap */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-input:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.entries-dropdown {
+  margin-right: 10px; /* Atur margin kanan untuk memisahkan dari elemen lain */
+  background-color: #fff; /* Latar belakang dropdown */
+  color: #9D1414; /* Warna teks dropdown */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.entries-dropdown:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+}
+
+.table-controls button,
+.pagination button,
+.pagination span {
+  background-color: #fff; /* Ubah latar belakang tombol menjadi putih */
+  color: #000000; /* Warna teks tetap */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.table-controls button:hover,
+.pagination button:hover,
+.pagination span:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+  cursor: pointer; /* Tambahkan kursor pointer */
+}
+
+
+/* Styling untuk dropdown options */
+.entries-dropdown select {
+  background-color: #fff; /* Latar belakang dropdown options */
+  color: #9D1414; /* Warna teks dropdown options */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.entries-dropdown select:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+table th {
+  background-color: #9D1414;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px; /* Increased padding for better spacing */
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+table td:nth-child(1),
+table td:nth-child(3) {
+  text-align: center; /* Mengatur teks di kolom kedua (NPM) menjadi ditengah */
+}
+
+table td {
+  text-align: left; /* Mengatur teks di seluruh data tabel menjadi rata kiri */
+}
+
+.link-icon {
+  width: 24px; /* Adjust size as needed */
+  height: auto;
+  vertical-align: middle;
+}
 
 /* Keyframe animations */
 @keyframes slideRight {
@@ -255,6 +455,19 @@ body {
     padding: 8px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
     font-size: 0.75em; /* Ukuran font lebih kecil */
     height: 35px; /* Tinggi lebih kecil */
+  }
+
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
+  }
+  
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
   }
 
   .box--logo {
@@ -363,61 +576,7 @@ body {
     margin: 0 75px;
   }
 
-.profile-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
-}
 
-.profile-box {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  background: #ffffff;
-  border-radius: 10px;
-  margin: 20px 0;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.profile-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.profile-img {
-  width: 150px;
-  height: 220px;
-  border-radius: 0;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
-.profile-content {
-  flex-grow: 1;
-}
-
-.profile-content h2 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #555;
-}
-
-.profile-content p {
-  margin: 5px 0;
-  color: #555;
-}
-
-.profile-content a {
-  color: #555;
-  text-decoration: none;
-}
-
-.profile-content a:hover {
-  text-decoration: underline;
-}
 
 .dropdown-content {
   top: 0;
@@ -432,6 +591,19 @@ body {
     height: 30px; /* Tinggi lebih kecil */
   }
   
+  .box--iconmenu:hover .dropdown-content {
+    display: block;
+  }
+  
+  .box--iconmenu:hover .arrow {
+    transform: rotate(-270deg); /* Rotate arrow */
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
   .box--logo img {
     height: 40px; /* Sesuaikan tinggi logo jika diperlukan */
     margin: 0 0 0 20px; /* Sesuaikan margin jika diperlukan */
@@ -442,18 +614,6 @@ body {
     margin-left: 0;
     opacity: 0;
     animation: slideRight 2s ease forwards;
-  }
-  
-  .box--additional-text {
-    margin-left: 50px; /* Geser kontainer ke kanan dengan margin kiri */
-  }
-  
-  .box--additional-text ul {
-    padding-left: 10px; /* Tambahkan padding kiri untuk isi daftar */
-  }
-  
-  .box--additional-text li {
-    margin-left: 10px; /* Jika perlu, tambahkan margin kiri untuk elemen daftar */
   }
 
   .box--icon {

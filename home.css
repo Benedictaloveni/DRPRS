@@ -26,6 +26,13 @@ body {
   z-index: 100;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column; /* Mengatur item menjadi kolom */
+  align-items: center; /* Mengatur item untuk berada di tengah secara horizontal */
+  width: 100%; /* Memastikan kontainer mengambil lebar penuh */
+}
+
 .box--btn {
   opacity: 0;
   animation: slideTop 1s ease forwards;
@@ -187,124 +194,146 @@ body {
   height: 20px; /* Tinggi default */
 }
 
+
 .news-section {
-  background-color: #6e0d0d; /* Warna latar belakang kotak */
-  padding: 20px; /* Jarak di sekitar konten dalam kotak */
-  position: relative; /* Membuat elemen relatif terhadap posisi aslinya */
-  margin-bottom: 10px; /* Jarak bawah untuk menghindari tumpang tindih dengan konten lain */
-  height: 350px;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.news-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-top: -30px;
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-.nav-button {
-  background-color: transparent; /* Warna latar belakang tombol */
-  border: 2px solid white; /* Warna dan ketebalan border */
-  color: white; /* Warna panah */
-  border-radius: 50%; /* Membuat lingkaran */
-  width: 50px; /* Lebar tombol */
-  height: 50px; /* Tinggi tombol */
-  display: flex; /* Untuk menempatkan panah di tengah */
-  align-items: center; /* Untuk menempatkan panah di tengah secara vertikal */
-  justify-content: center; /* Untuk menempatkan panah di tengah secara horizontal */
-  cursor: pointer; /* Mengubah kursor saat di-hover */
-  transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
-  font-size: 24px; /* Ukuran panah */
+.news-item {
+  background-color: white;
+  border: 2px solid #9D1414;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
 }
 
-.nav-button:hover {
-  background-color: white; /* Warna latar belakang saat di-hover */
-  color: #9D1414; /* Warna panah saat di-hover */
+.news-image {
+  width: 100%;
+  height: 200px; /* Set height to ensure consistency */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  transition: transform 0.3s ease; /* Transisi halus untuk efek zoom */
+}
+
+.news-item:hover .news-image {
+  transform: scale(1.1); /* Zoom gambar saat hover */
 }
 
 .news-content {
-  transform: translateY(-50px); /* Geser elemen ke atas */
-  padding: 20px;
-  margin: 0 60px;
-  color: #ffffff;
-}
-
-.prev-news {
-  position: absolute;
-  left: 20px; /* Menempatkan tombol di kiri, sesuaikan nilainya jika perlu */
-  top: 50%; /* Menempatkan tombol di tengah secara vertikal */
-  transform: translateY(-50%); /* Menyesuaikan posisi vertikal */
-}
-
-/* Posisi tombol next di kanan */
-.next-news {
-  position: absolute;
-  right: 20px; /* Menempatkan tombol di kanan, sesuaikan nilainya jika perlu */
-  top: 50%; /* Menempatkan tombol di tengah secara vertikal */
-  transform: translateY(-50%); /* Menyesuaikan posisi vertikal */
-}
-
-.prev-news, .next-news {
-  background-color: #6e0d0d;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  z-index: 10; /* Pastikan tombol di atas elemen lainnya */
+  padding: 15px;
 }
 
 .news-summary {
   font-size: 14px;
-  color: #ffffff;
-  margin-top: 50px; /* Tambahkan margin-top untuk spasi tambahan */
+  color: #333;
 }
 
-
-.news-slider-container {
-  overflow: hidden;
-  position: relative; /* Tambahkan posisi relatif untuk kontrol tombol */
-}
-
-.news-slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.news-slide {
-  min-width: 100%;
-  box-sizing: border-box;
+.news-header {
   display: flex;
   align-items: center;
+  margin-bottom: 20px; /* Spacing below the header */
+}
+
+.vertical-bar {
+  font-size: 24px; /* Ukuran font garis vertikal */
+  color: #9D1414; /* Warna garis vertikal */
+  border-left: 5px solid #9D1414; /* Ketebalan dan warna garis vertikal */
+  height: 24px; /* Sesuaikan dengan ukuran font */
+  margin-right: 10px; /* Spasi antara garis vertikal dan judul */
+  display: inline-block; /* Agar garis vertikal tidak memanjang */
+}
+
+.news-header h2 {
+  color: #000; /* Warna teks judul */
+  font-size: 24px; /* Ukuran font judul */
+  margin: 0; /* Hapus margin default */
+  font-weight: normal; /* Berat font normal untuk judul */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #fff; /* Latar belakang tombol */
+  color: #000; /* Warna teks tombol */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px; /* Ukuran font tombol */
+}
+
+.pagination button:hover {
+  background-color: #9D1414; /* Latar belakang tombol saat hover */
+  color: #fff; /* Warna teks tombol saat hover */
+  cursor: pointer; /* Kursor pointer saat hover */
+}
+
+.pagination span {
+  color: #000; /* Warna teks angka halaman */
+  padding: 5px 10px;
+  font-size: 16px; /* Ukuran font angka halaman */
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 2px; /* Memberikan jarak antar angka */
+}
+
+.pagination span:hover {
+  background-color: #9D1414; /* Latar belakang saat hover */
+  color: #fff; /* Warna teks saat hover */
+}
+
+.pagination .active {
+  color: #fff; /* Warna teks halaman aktif */
+  background-color: #9D1414; /* Latar belakang halaman aktif */
 }
 
 
-.news-content {
-  flex: 1;
-  padding-right: 20px;
+.background-box {
+  position: relative; /* Mengatur kontainer relatif agar child bisa diposisikan absolut */
+  background-image: url('Assets/landing.png'); /* Ganti dengan path gambar latar belakang */
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.news-image {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-  margin-right: 80px; /* Sesuaikan nilai ini untuk menggeser gambar ke kanan */
-  margin-top: 40px;
+.welcome-box {
+  position: absolute;
+  top: 70%; /* Posisi di bawah elemen sebelumnya */
+  right: 115px; /* Mengatur ke posisi paling kiri */
+  background-color: #9D1414; /* Warna merah */
+  color: #fff;
+  padding: 0 20px; /* Mengurangi padding untuk memperkecil kotak */
+  border-radius: 15px; /* Border yang agak bulat */
+  font-size: 14px; /* Mengatur ukuran font lebih kecil */
+  white-space: nowrap; /* Mencegah teks membungkus ke baris baru */
 }
 
-.left-column {
-  flex: 1;
-}
-
-.right-column {
-  flex: 2;
-}
 
 .main-title {
   font-family: 'Lucida Sans Regular', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  margin: 10px 0;
+  color: #fff;
+  margin: 20px 0;
   opacity: 0;
   animation: fadeIn 2s ease forwards;
   font-style: italic;
@@ -314,6 +343,7 @@ body {
   font-family: 'DM Serif Display', serif;
   font-size: 1em;
   text-align: center;
+  color: #fff;
   margin-top: 10px;
   font-weight: normal;
   opacity: 0;
@@ -324,25 +354,12 @@ body {
   margin: 40px 70px 70px;
   font-size: 1em;
   text-align: justify;
+  color: #fff;
   opacity: 0;
   animation: fadeIn 4s ease forwards;
 }
 
-.recent-news {
-  font-weight: bold;
-  margin-top: 20px;
-  margin-left: 70px;
-}
 
-.news-list {
-  list-style-type: disc;
-  padding: 0;
-  margin-left: 90px;
-}
-
-.news-list li {
-  margin-bottom: 10px;
-}
 
 /* Keyframe animations */
 @keyframes slideRight {
