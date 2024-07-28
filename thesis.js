@@ -39,7 +39,7 @@ function toggleMenu() {
 // Fungsi untuk mengambil data dari JSON dan memuat tabel 
 async function getDataAndPopulateTable() {
     try {
-        const response = await fetch('NewsArchive.json');
+        const response = await fetch('ResearchThesis.json');
         const data = await response.json();
         allData = data.slice(1);
         filteredData = allData;

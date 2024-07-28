@@ -86,6 +86,7 @@ body {
   position: relative;
 }
 
+/* Tambahkan jarak antara ikon dan teks dalam elemen box--judul */
 .box--judul {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -96,40 +97,126 @@ body {
   opacity: 0;
   animation: slideTop 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
-  margin-left: 10px; /* Jarak antara ikon dan teks */
 }
 
+.box--tulisan {
+  margin-left: 5px; /* Atur nilai ini sesuai kebutuhan untuk jarak tambahan */
+}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #9D1414;
-  width: auto;
-  min-width: 80px;
-  box-shadow: 0px 8px 16px 0px #00000033;
+  background-color: #9D1414; /* Background color */
+  width: 90%; /* Match the width of the parent */
+  box-shadow: 0px 8px 16px 0px #00000033; /* Box shadow for effect */
   z-index: 1;
   text-align: left;
-  padding: 10px;
-  top: 45px;
-  right: 0;
+  padding: 0; /* Remove padding to avoid extra space */
+  top: 45px; /* Positioning below the parent */
+  right: 0; /* Align to the right if needed */
 }
 
 .dropdown-content a {
   color: #ffffff;
   text-decoration: none;
   display: block;
-  padding: 5px 0;
+  padding: 5px; /* Control spacing inside links */
   font-size: 0.5em;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .dropdown-content a:hover {
-  background-color: #ffffff;
-  color: #555;
+  background-color: #ffffff; /* Hover background color */
+  color: #555; /* Hover text color */
 }
 
-.dropdown-content a img {
-  margin-right: 5px; /* Jarak antara ikon gambar dan teks */
+.box--iconmenu:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
 }
 
+.center-text {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.fixed-info {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 15px;
+  border: 1px solid #9D1414;
+  background-color: #FFFFFF;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.info-box {
+  position: relative;
+  border: 2px solid #9D1414;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  color: #9D1414;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #ff0000;
+}
+
+.info-image {
+  flex: 1;
+  max-width: 150px;
+  text-align: center;
+}
+
+.info-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+.info-content {
+  flex: 2;
+  padding-left: 80px;
+}
+
+.info-content input[type="text"],
+.info-content textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-info-btn {
+  background-color: #9D1414;
+  color: #FFFFFF;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8em;
+  display: block;
+  margin: 20px auto;
+  margin-left: 265px;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.add-info-btn:hover {
+  background-color: #B51717;
+}
 
 .hamburger-menu {
   display: none;
@@ -322,10 +409,6 @@ body {
       display: inline-block;
       transition: transform 0.3s ease;
     }
-    
-    .box--iconmenu:hover .dropdown-content {
-      display: block;
-    }
 }
 
 @media (max-width: 414px) {
@@ -342,10 +425,6 @@ body {
   .arrow {
     display: inline-block;
     transition: transform 0.3s ease;
-  }
-  
-  .box--iconmenu:hover .dropdown-content {
-    display: block;
   }
 
   .box--logo {

@@ -1,3 +1,4 @@
+// Toggle menu
 let isOpen = false;
 
 function toggleMenu() {
@@ -18,9 +19,7 @@ document.addEventListener('click', function(event) {
         nav.classList.remove('show');    // Sembunyikan menu dropdown
         hamburger.classList.remove('active'); // Nonaktifkan animasi ikon hamburger
         isOpen = false;
-    }
-
-    
+    } 
 });
 
 function toggleDropdown(event, dropdownId) {

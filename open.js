@@ -1,3 +1,4 @@
+// Toggle menu
 let isOpen = false;
 
 function toggleMenu() {
@@ -18,9 +19,7 @@ document.addEventListener('click', function(event) {
         nav.classList.remove('show');    // Sembunyikan menu dropdown
         hamburger.classList.remove('active'); // Nonaktifkan animasi ikon hamburger
         isOpen = false;
-    }
-
-    
+    } 
 });
 
 function toggleDropdown(event, dropdownId) {
@@ -33,5 +32,53 @@ function toggleDropdown(event, dropdownId) {
     } else {
         dropdown.style.display = 'block';
         arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
+    }
+}
+
+// Function to add a new information box
+function tambahInformasi() {
+    var container = document.getElementById('info-container');
+    
+    var newInfoBox = document.createElement('div');
+    newInfoBox.className = 'info-box';
+    
+    newInfoBox.innerHTML = `
+      <button class="delete-btn" onclick="hapusInformasi(this)">x</button>
+      <div class="info-image">
+        <img src="placeholder.jpg" alt="Photo">
+        <input type="file" accept="image/*" onchange="previewImage(this)">
+      </div>
+      <div class="info-content">
+        <label>Jenis Pekerjaan:</label>
+        <input type="text" name="job_type">
+        
+        <label>Pengunggah:</label>
+        <input type="text"  name="uploader">
+        
+        <label>Deskripsi:</label>
+        <textarea name="description" ></textarea>
+        
+        <label>Link URL:</label>
+        <input type="text" name="link">
+      </div>
+    `;
+    
+    container.appendChild(newInfoBox);
+}
+
+// Function to remove an information box
+function hapusInformasi(button) {
+    var infoBox = button.parentElement;
+    infoBox.remove();
+}
+
+// Function to preview uploaded image
+function previewImage(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            input.previousElementSibling.src = e.target.result;
+        }
+        reader.readAsDataURL(input.files[0]);
     }
 }

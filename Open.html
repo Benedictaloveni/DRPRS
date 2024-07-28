@@ -31,17 +31,17 @@
                         </a>
                     </li>
                     <li class="box--iconmenu dropdown">
-                        <a class="box--judul" href="Research.html" onclick="toggleDropdown(event, 'research-dropdown')" style="--i: 1">
+                        <a class="box--judul" href="Research.html" onclick="toggleDropdown(event, 'research-dropdown')" style="--i: 3">
                             <div><img class="box--icon" src="Assets/Research.png" /></div>
                             <p class="box--tulisan">Research <span class="arrow">⏷</span></p>
                         </a>
                         <ul id="research-dropdown" class="dropdown-content">
                             <a href="Publication.html">Publications</a>
-                            <a href="bResearch.html">Option B</a>
+                            <a href="Thesis.html">Thesis</a>
                         </ul>
                     </li>
                     <li class="box--iconmenu dropdown">
-                        <a class="box--judul" href="Software.html" onclick="toggleDropdown(event, 'software-dropdown')" style="--i: 2">
+                        <a class="box--judul" href="Software.html" onclick="toggleDropdown(event, 'software-dropdown')" style="--i: 4">
                             <div><img class="box--icon" src="Assets/software.png" /></div>
                             <p class="box--tulisan">Software <span class="arrow">⏷</span></p>
                         </a>
@@ -83,9 +83,23 @@
         <main>
             <!-- Judul Halaman -->
             <div class="center-text">
-                <h1>Open Positions</h1>
+                <h1>Posisi Tersedia</h1>
             </div>
-            </main>
+            
+            <!-- Fixed Information Section -->
+            <div class="fixed-info">
+                <p>Kami menyediakan informasi bagi Anda yang mencari peluang kerja atau magang di perusahaan. Jika tertarik, silakan lihat tautan URL yang tersedia atau hubungi pengunggah informasi untuk detail lebih lanjut. Lihat publikasi dan minat riset kami saat ini untuk memahami lebih lanjut tentang area yang kami eksplorasi.</p>
+            </div>
+        
+            <!-- Container for Dynamic Information and Opportunities -->
+            <div class="info-container" id="info-container">
+                <!-- User-generated content will go here -->
+            </div>
+            
+            <!-- Button for adding new info boxes -->
+            <button class="add-info-btn" onclick="tambahInformasi()">Tambah Informasi</button>
+        </main>
+        
 
         <div class="box--btn">
             <a href="home.html"></a>

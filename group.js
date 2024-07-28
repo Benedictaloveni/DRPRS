@@ -1,3 +1,4 @@
+// Toggle menu
 let isOpen = false;
 
 function toggleMenu() {
@@ -18,9 +19,7 @@ document.addEventListener('click', function(event) {
         nav.classList.remove('show');    // Sembunyikan menu dropdown
         hamburger.classList.remove('active'); // Nonaktifkan animasi ikon hamburger
         isOpen = false;
-    }
-
-    
+    } 
 });
 
 function toggleDropdown(event, dropdownId) {
@@ -35,3 +34,37 @@ function toggleDropdown(event, dropdownId) {
         arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
     }
 }
+
+function tambahKegiatan() {
+    var container = document.querySelector('.activities-container');
+    
+    var newActivityBox = document.createElement('div');
+    newActivityBox.className = 'activity-box';
+    
+    // Adding inner HTML for the new activity box
+    newActivityBox.innerHTML = `
+      <button class="delete-btn" onclick="hapusKegiatan(this)">x</button>
+      <form>
+        <label>Jenis kegiatan:</label>
+        <input type="text" name="jenis" placeholder="Regular Meeting"><br>
+        
+        <label>Hari:</label>
+        <input type="date" name="hari"><br>
+        
+        <label>Waktu:</label>
+        <input type="time" name="waktu"><br>
+      </form>
+    `;
+    
+    // Inserting the new activity box before the "Tambah Kegiatan" button
+    var addButton = container.querySelector('.add-activity-btn');
+    container.insertBefore(newActivityBox, addButton);
+}
+
+function hapusKegiatan(button) {
+    var activityBox = button.parentElement;
+    activityBox.remove(); // Removes the activity box from the DOM
+}
+
+  
+  

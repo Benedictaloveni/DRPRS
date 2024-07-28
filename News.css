@@ -86,6 +86,7 @@ body {
   position: relative;
 }
 
+/* Tambahkan jarak antara ikon dan teks dalam elemen box--judul */
 .box--judul {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -96,39 +97,43 @@ body {
   opacity: 0;
   animation: slideTop 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
-  margin-left: 10px; /* Jarak antara ikon dan teks */
+}
+
+.box--tulisan {
+  margin-left: 5px; /* Atur nilai ini sesuai kebutuhan untuk jarak tambahan */
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #9D1414;
-  width: auto;
-  min-width: 80px;
-  box-shadow: 0px 8px 16px 0px #00000033;
+  background-color: #9D1414; /* Background color */
+  width: 90%; /* Match the width of the parent */
+  box-shadow: 0px 8px 16px 0px #00000033; /* Box shadow for effect */
   z-index: 1;
   text-align: left;
-  padding: 10px;
-  top: 45px;
-  right: 0;
+  padding: 0; /* Remove padding to avoid extra space */
+  top: 45px; /* Positioning below the parent */
+  right: 0; /* Align to the right if needed */
 }
 
 .dropdown-content a {
   color: #ffffff;
   text-decoration: none;
   display: block;
-  padding: 5px 0;
+  padding: 5px; /* Control spacing inside links */
   font-size: 0.5em;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .dropdown-content a:hover {
-  background-color: #ffffff;
-  color: #555;
+  background-color: #ffffff; /* Hover background color */
+  color: #555; /* Hover text color */
 }
 
-.dropdown-content a img {
-  margin-right: 5px; /* Jarak antara ikon gambar dan teks */
+.box--iconmenu:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
 }
+
 
 .hamburger-menu {
   display: none;
@@ -194,6 +199,167 @@ body {
   width: 100%; /* Lebar penuh */
   font-size: 0.8em; /* Ukuran font default */
   height: 20px; /* Tinggi default */
+}
+
+.table-container {
+  position: relative;
+  max-width: 90%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  text-align: center;
+  overflow-x: auto;
+  background-color: #fff; /* Background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  min-height: 500px;
+}
+
+.no-container {
+  width: 100px; /* Atur lebar untuk kolom No */
+}
+
+.year-container {
+  width: 120px; /* Atur lebar untuk kolom Tahun */
+}
+
+
+.table-controls {
+  display: flex;
+  justify-content: space-between; /* Posisikan elemen di sebelah kiri dan kanan */
+  align-items: center;
+  margin-bottom: 10px; /* Atur margin bawah sesuai kebutuhan */
+}
+
+.search-input {
+  background-color: #fff; /* Ubah latar belakang menjadi putih */
+  color: #9D1414; /* Warna teks tetap */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-input:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.entries-dropdown {
+  margin-right: 10px; /* Atur margin kanan untuk memisahkan dari elemen lain */
+  background-color: #fff; /* Latar belakang dropdown */
+  color: #9D1414; /* Warna teks dropdown */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+th {
+  position: relative; /* Menambahkan konteks posisi untuk anak elemen absolut */
+  text-align: center; /* Pusatkan teks header */
+}
+
+.sort-buttons {
+  position: absolute;
+  right: 20px; /* Memposisikan ke kanan */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the buttons */
+  display: flex;
+  flex-direction: column; /* Mengatur tombol dalam kolom vertikal */
+  align-items: center;
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  font-size: 0.7em;
+  cursor: pointer;
+  color: #fffcfc;
+  padding: 0;
+  margin: 0;
+}
+
+.sort-arrow {
+  font-size: 0.8em; /* Ukuran panah */
+  margin: 0; /* Menghapus margin default */
+}
+
+.sort-button:hover .sort-arrow {
+  color: #000; /* Warna panah saat hover */
+} 
+
+.entries-dropdown:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+}
+
+.table-controls button,
+.pagination button,
+.pagination span {
+  background-color: #fff; /* Ubah latar belakang tombol menjadi putih */
+  color: #000000; /* Warna teks tetap */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.table-controls button:hover,
+.pagination button:hover,
+.pagination span:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+  cursor: pointer; /* Tambahkan kursor pointer */
+}
+
+
+/* Styling untuk dropdown options */
+.entries-dropdown select {
+  background-color: #fff; /* Latar belakang dropdown options */
+  color: #9D1414; /* Warna teks dropdown options */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.entries-dropdown select:hover {
+  background-color: #9D1414; /* Ubah latar belakang saat dihover */
+  color: #fff; /* Ubah warna teks saat dihover */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+table th {
+  background-color: #9D1414;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px; /* Increased padding for better spacing */
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+table td:nth-child(1),
+table td:nth-child(3) {
+  text-align: center; /* Mengatur teks di kolom kedua (NPM) menjadi ditengah */
+}
+
+table td {
+  text-align: left; /* Mengatur teks di seluruh data tabel menjadi rata kiri */
 }
 
 /* Keyframe animations */
@@ -321,10 +487,6 @@ body {
       display: inline-block;
       transition: transform 0.3s ease;
     }
-    
-    .box--iconmenu:hover .dropdown-content {
-      display: block;
-    }
 }
 
 @media (max-width: 414px) {
@@ -341,10 +503,6 @@ body {
   .arrow {
     display: inline-block;
     transition: transform 0.3s ease;
-  }
-  
-  .box--iconmenu:hover .dropdown-content {
-    display: block;
   }
 
   .box--logo {
