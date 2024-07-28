@@ -81,32 +81,33 @@
         </header>
 
         <main>
-            <!-- Judul Halaman -->
-            <div class="center-text">
-              <h1>Group Meeting</h1>
+         
+            
+        <section class="container">
+            <h2>Group Meetings</h2>
+            <div id="event-summary">
+                <!-- Event summaries will be added here -->
             </div>
-          
-            <!-- Kegiatan Section -->
-            <div class="activities-container">
-              <div class="activity-box">
-                <button class="delete-btn" onclick="hapusKegiatan(this)">x</button>
-                <p>Semua anggota aktif dalam group ini diharapkan mengikuti jadwal kegiatan berikut:</p>
-                <form>
-                  <label>Jenis kegiatan:</label>
-                  <input type="text" name="jenis"><br>
-                  
-                  <label>Hari:</label>
-                  <input type="date" name="hari"><br>
-                  
-                  <label>Waktu:</label>
-                  <input type="time" name="waktu"><br>
-                </form>
-              </div>
-              <!-- Button for adding new activities -->
-              <button class="add-activity-btn" onclick="tambahKegiatan()">Tambah Kegiatan</button>
-            </div>
+        </section>
           </main>
           
+
+        <section class="container">
+            <h3>Add Activities</h3>
+            <form id="event-form">
+                <label for="event-name">Nama Kegiatan:</label>
+                <input type="text" id="event-name" name="event-name" required>
+
+                <label for="event-date">Tanggal:</label>
+                <input type="date" id="event-date" name="event-date" required>
+
+                <label for="event-description">Deskripsi:</label>
+                <textarea id="event-description" name="event-description" required></textarea>
+
+                <button type="submit">Tambah Kegiatan</button>
+            </form>
+        </section>
+
         <div class="box--btn">
             <a href="home.html"></a>
         </div>

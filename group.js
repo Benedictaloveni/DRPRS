@@ -33,38 +33,78 @@ function toggleDropdown(event, dropdownId) {
         dropdown.style.display = 'block';
         arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
     }
-}
+}document.addEventListener('DOMContentLoaded', function() {
+    const eventForm = document.getElementById('event-form');
+    const eventSummary = document.getElementById('event-summary');
 
-function tambahKegiatan() {
-    var container = document.querySelector('.activities-container');
-    
-    var newActivityBox = document.createElement('div');
-    newActivityBox.className = 'activity-box';
-    
-    // Adding inner HTML for the new activity box
-    newActivityBox.innerHTML = `
-      <button class="delete-btn" onclick="hapusKegiatan(this)">x</button>
-      <form>
-        <label>Jenis kegiatan:</label>
-        <input type="text" name="jenis" placeholder="Regular Meeting"><br>
-        
-        <label>Hari:</label>
-        <input type="date" name="hari"><br>
-        
-        <label>Waktu:</label>
-        <input type="time" name="waktu"><br>
-      </form>
-    `;
-    
-    // Inserting the new activity box before the "Tambah Kegiatan" button
-    var addButton = container.querySelector('.add-activity-btn');
-    container.insertBefore(newActivityBox, addButton);
-}
+    // Load events from localStorage
+    function loadEvents() {
+        const events = JSON.parse(localStorage.getItem('events')) || [];
+        events.forEach(event => addEventToSummary(event));
+    }
 
-function hapusKegiatan(button) {
-    var activityBox = button.parentElement;
-    activityBox.remove(); // Removes the activity box from the DOM
-}
+    // Save event to localStorage
+    function saveEvent(event) {
+        const events = JSON.parse(localStorage.getItem('events')) || [];
+        events.push(event);
+        localStorage.setItem('events', JSON.stringify(events));
+    }
 
-  
-  
+    // Add event to summary section
+    function addEventToSummary(event, index) {
+        const eventDiv = document.createElement('div');
+        eventDiv.classList.add('event');
+        eventDiv.innerHTML = `
+            <h3>${event.name}</h3>
+            <p><strong>Tanggal:</strong> ${event.date}</p>
+            <p>${event.description}</p>
+            <button class="done-button" data-index="${index}">Done</button>
+        `;
+        eventSummary.appendChild(eventDiv);
+    }
+
+    // Handle form submission
+    eventForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const eventName = document.getElementById('event-name').value;
+        const eventDate = document.getElementById('event-date').value;
+        const eventDescription = document.getElementById('event-description').value;
+
+        const event = {
+            name: eventName,
+            date: eventDate,
+            description: eventDescription
+        };
+
+        saveEvent(event);
+        addEventToSummary(event, JSON.parse(localStorage.getItem('events')).length - 1);
+
+        eventForm.reset();
+    });
+
+    // Handle removing events
+    eventSummary.addEventListener('click', function(e) {
+        if (e.target.classList.contains('done-button')) {
+            const index = e.target.getAttribute('data-index');
+            removeEvent(index);
+        }
+    });
+
+    // Remove event from localStorage
+    function removeEvent(index) {
+        let events = JSON.parse(localStorage.getItem('events')) || [];
+        events.splice(index, 1);
+        localStorage.setItem('events', JSON.stringify(events));
+        refreshEvents();
+    }
+
+    // Refresh events list
+    function refreshEvents() {
+        eventSummary.innerHTML = '';
+        loadEvents();
+    }
+
+    // Initial load
+    loadEvents();
+});
