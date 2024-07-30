@@ -33,78 +33,75 @@ function toggleDropdown(event, dropdownId) {
         dropdown.style.display = 'block';
         arrow.style.transform = 'rotate(-270deg)'; // Rotate arrow to the left
     }
-}document.addEventListener('DOMContentLoaded', function() {
-    const eventForm = document.getElementById('event-form');
-    const eventSummary = document.getElementById('event-summary');
+}
 
-    // Load events from localStorage
-    function loadEvents() {
-        const events = JSON.parse(localStorage.getItem('events')) || [];
-        events.forEach(event => addEventToSummary(event));
+document.addEventListener('DOMContentLoaded', function() {
+    const activitiesContainer = document.querySelector('.activities-container');
+    const addActivityBtn = document.querySelector('.add-activity-btn');
+
+    // Load activities from localStorage
+    function loadActivities() {
+        const activities = JSON.parse(localStorage.getItem('activities')) || [];
+        activities.forEach(activity => addActivity(activity, false));
     }
 
-    // Save event to localStorage
-    function saveEvent(event) {
-        const events = JSON.parse(localStorage.getItem('events')) || [];
-        events.push(event);
-        localStorage.setItem('events', JSON.stringify(events));
+    // Save activities to localStorage
+    function saveActivities(activities) {
+        localStorage.setItem('activities', JSON.stringify(activities));
     }
 
-    // Add event to summary section
-    function addEventToSummary(event, index) {
-        const eventDiv = document.createElement('div');
-        eventDiv.classList.add('event');
-        eventDiv.innerHTML = `
-            <h3>${event.name}</h3>
-            <p><strong>Tanggal:</strong> ${event.date}</p>
-            <p>${event.description}</p>
-            <button class="done-button" data-index="${index}">Done</button>
+    // Add an activity to the DOM and localStorage
+    function addActivity(activityData, save = true) {
+        const activityBox = document.createElement('div');
+        activityBox.classList.add('activity-box');
+        activityBox.innerHTML = `
+            <button class="delete-btn">Done</button>
+            <p>${activityData}</p>
         `;
-        eventSummary.appendChild(eventDiv);
+        activityBox.querySelector('.delete-btn').addEventListener('click', function() {
+            deleteActivity(activityBox);
+        });
+        activitiesContainer.insertBefore(activityBox, activitiesContainer.firstChild);
+
+        if (save) {
+            const activities = JSON.parse(localStorage.getItem('activities')) || [];
+            activities.unshift(activityData);
+            saveActivities(activities);
+        }
     }
 
-    // Handle form submission
-    eventForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    // Delete an activity from the DOM and localStorage
+    function deleteActivity(activityBox) {
+        const activities = JSON.parse(localStorage.getItem('activities')) || [];
+        const index = Array.from(activitiesContainer.children).indexOf(activityBox);
+        activities.splice(index, 1);
+        saveActivities(activities);
+        activityBox.remove();
+    }
 
-        const eventName = document.getElementById('event-name').value;
-        const eventDate = document.getElementById('event-date').value;
-        const eventDescription = document.getElementById('event-description').value;
+    // Add a new activity on button click
+    addActivityBtn.addEventListener('click', function() {
+        const jenisInput = document.querySelector('input[name="jenis"]');
+        const hariInput = document.querySelector('input[name="hari"]');
+        const waktuInput = document.querySelector('input[name="waktu"]');
 
-        const event = {
-            name: eventName,
-            date: eventDate,
-            description: eventDescription
-        };
+        const jenis = jenisInput.value.trim();
+        const hari = hariInput.value;
+        const waktu = waktuInput.value;
 
-        saveEvent(event);
-        addEventToSummary(event, JSON.parse(localStorage.getItem('events')).length - 1);
+        if (jenis && hari && waktu) {
+            const activityData = `${jenis} pada ${hari} pukul ${waktu}`;
+            addActivity(activityData);
 
-        eventForm.reset();
-    });
-
-    // Handle removing events
-    eventSummary.addEventListener('click', function(e) {
-        if (e.target.classList.contains('done-button')) {
-            const index = e.target.getAttribute('data-index');
-            removeEvent(index);
+            // Reset form
+            jenisInput.value = '';
+            hariInput.value = '';
+            waktuInput.value = '';
+        } else {
+            alert('Semua field harus diisi!');
         }
     });
 
-    // Remove event from localStorage
-    function removeEvent(index) {
-        let events = JSON.parse(localStorage.getItem('events')) || [];
-        events.splice(index, 1);
-        localStorage.setItem('events', JSON.stringify(events));
-        refreshEvents();
-    }
-
-    // Refresh events list
-    function refreshEvents() {
-        eventSummary.innerHTML = '';
-        loadEvents();
-    }
-
     // Initial load
-    loadEvents();
+    loadActivities();
 });

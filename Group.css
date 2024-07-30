@@ -138,31 +138,27 @@ body {
   text-align: center;
 }
 
+
+
 /* Container for the activities */
 .activities-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: 20px auto;
-  border: 1px solid #920000;
-  text-align: left; /* Aligns content, including the button, to the left */
-  border-radius: 8px; /* Rounded corners */
+  text-align: left;
 }
 
 .add-activity-btn {
   background-color: #9D1414;
-  color: #FFFFFF;
-  padding: 5px 15px;
-  border: 10px;
-  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Mengurangi padding */
   font-size: 0.8em;
+  cursor: pointer;
+  border-radius: 4px;
   margin-top: 10px;
-  display: inline-block; /* Prevents the button from taking full width */
-  margin-left: 0; /* Ensures the button starts from the left */
-  border-radius: 8px; /* Rounded corners */
-}
-
-.add-activity-btn:hover {
-  background-color: #B51717;
+  display: inline-block;
+  width: auto; /* Pastikan tombol tidak mengambil lebar penuh */
 }
 
 .activity-box {
@@ -171,28 +167,27 @@ body {
   padding: 15px;
   margin-bottom: 10px;
   background-color: #FFFFFF;
-  border-radius: 8px; /* Rounded corners */
+  text-align: left;
 }
 
 .delete-btn {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  background: none;
+  bottom: 5px; /* Mengatur tombol di bawah */
+  right: 5px; /* Mengatur tombol di kanan */
+  background-color: #9D1414; /* Latar belakang merah */
+  color: white; /* Warna teks putih */
   border: none;
-  color: #9D1414;
   font-weight: bold;
   cursor: pointer;
-}
-
-.delete-btn:hover {
-  color: #ff0000;
+  padding: 5px 10px; /* Padding untuk area klik */
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi */
 }
 
 .activity-box label,
 .activity-box input {
   display: block;
-  width: 100%;
+  width: 95%;
   margin-bottom: 10px;
 }
 
@@ -397,53 +392,6 @@ body {
       transition: transform 0.3s ease;
     }
 }
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border: #920000;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #920000;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #920000;
-}
-
-h1, h2 {
-  text-align: center;
-}
-
-.event {
-  border: 1px solid #920000;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #fff;
-}
 
 
 
@@ -495,52 +443,4 @@ h1, h2 {
     }
 }
 
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border: 1px solid #920000;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #920000;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #920000;
-}
-
-h1, h2 {
-  text-align: center;
-}
-
-.event {
-  border: 1px solid #920000;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #fff;
-}
 
