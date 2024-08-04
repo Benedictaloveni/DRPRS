@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRPRS</title>
-    <link rel="stylesheet" href="Group.css">
+    <link rel="stylesheet" href="Dosen2.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <main>
         <header class="box--header">
             <div class="box--logo">
                 <img src="Assets/logo.png" alt="Logo">
             </div>
-
             <nav class="box--navigasi">
                 <ul class="box--subnavigasi">
                     <li class="box--iconmenu">
@@ -53,7 +49,7 @@
                         </ul>
                     </li>
                     <li class="box--iconmenu">
-                        <a class="box--judul" href="News.html" style="--i: 3">
+                        <a class="box--judul" href="News.html" style="--i: 5">
                             <div><img class="box--icon" src="Assets/news.png" /></div>
                             <p class="box--tulisan">News Archive</p>
                         </a>
@@ -65,62 +61,101 @@
                         </a>
                     </li>
                     <li class="box--iconmenu">
-                        <a class="box--judul" href="Group.html" style="--i: 5">
+                        <a class="box--judul" href="Group.html" style="--i: 7">
                             <div><img class="box--icon" src="Assets/group.png" /></div>
                             <p class="box--tulisan">Group Meetings</p>
                         </a>
                     </li>
                 </ul>
             </nav>
-
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </header>
-
-        <main>
-         
-            
-            <main>
-                <!-- Judul Halaman -->
-                <div class="center-text">
-                  <h1>Group Meeting</h1>
+<body>
+    <div class="container">
+        <!-- Box Container -->
+        <div class="profile-box">
+            <div class="profile-left">
+                <img src="Assets/Dosen2.jpg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <div class="profile-info">
+                <h2>MUHAMMAD AUFARISTAMA</h2> <!-- Added name -->
+                <div class="info-item">
+                    <img src="Assets/clock.png" alt="Office Hours Icon" class="info-icon">
+                    <span>Office hour for students: Fridays 10:00 - 11:00 by appointment</span>
                 </div>
-              
-                <!-- Kegiatan Section -->
-                <div class="activities-container">
-                  <div class="activity-box">
-                    <button class="delete-btn" onclick="hapusKegiatan(this)"> Done </button>
-                    <p>Semua anggota aktif dalam group ini diharapkan mengikuti jadwal kegiatan berikut:</p>
-                    <form>
-                      <label>Jenis kegiatan:</label>
-                      <input type="text" name="jenis"><br>
-                      
-                      <label>Hari:</label>
-                      <input type="date" name="hari"><br>
-                      
-                      <label>Waktu:</label>
-                      <input type="time" name="waktu"><br>
-                    </form>
-                  </div>
-                  <!-- Button for adding new activities -->
-                  <button class="add-activity-btn" onclick="tambahKegiatan()">Tambah Kegiatan</button>
+                <div class="info-item">
+                    <img src="Assets/location.png" alt="Building Icon" class="info-icon">
+                    <span>Building Kollegiengebäude Mathematik (20.30)</span>
                 </div>
-              </main>
-              
-
-        <div class="box--btn">
-            <a href="home.html"></a>
+                <div class="info-item">
+                    <img src="Assets/room.png" alt="Room Icon" class="info-icon">
+                    <span>Room 3.011</span>
+                </div>
+                <div class="info-item">
+                    <img src="Assets/phone.png" alt="Phone Icon" class="info-icon">
+                    <span>Tel. +49 721 608 44191</span>
+                </div>
+                <div class="info-item">
+                    <img src="Assets/fax.png" alt="Fax Icon" class="info-icon">
+                    <span>Fax +49 721 608 42403</span>
+                </div>
+                <div class="info-item">
+                    <img src="Assets/mail.png" alt="Email Icon" class="info-icon">
+                    <span>mathias.krause@kit.edu</span>
+                </div>
+            </div>
+            <div class="profile-right">
+                <div class="profile-right-info">
+                    <p>Institute for Applied and Numerical Mathematics</p>
+                    <p>Karlsruhe Institute of Technology (KIT)</p>
+                    <p>Bldg. 20.30</p>
+                    <p>Englerstr. 2</p>
+                    <p>D-76131 Karlsruhe</p>
+                </div>
+                <div class="profile-right-info">
+                    <p>Institute for Mechanical Process Engineering and Mechanics</p>
+                    <p>Karlsruhe Institute of Technology (KIT)</p>
+                    <p>Bldg. 30.70</p>
+                    <p>Straße am Forum 8</p>
+                    <p>D-76131 Karlsruhe</p>
+                </div>
+            </div>
         </div>
-    </main>
 
-    <footer class="box--footer">
-        <p>Copyright © 2024 Department of Geophysics FMIPA Unpad</p>
-    </footer>
+        <!-- Additional Sections -->
+        <div class="additional-sections">
+            <div class="section-header">
+                <div class="vertical-bar"></div>
+                <span>Research Interest</span>
+            </div>
+            <div class="section-header">
+                <div class="vertical-bar"></div>
+                <span>Publications</span>
+            </div>
+            <div class="section-header">
+                <div class="vertical-bar"></div>
+                <span>Academic Self Governance and Responsibilities</span>
+            </div>
+            <div class="section-header">
+                <div class="vertical-bar"></div>
+                <span>Recent Lectures and Courses</span>
+            </div>
+        </div>
+    </div>
 
-    <script src="group.js"></script>
+    <div class="box--btn">
+        <a href="home.html"></a>
+    </div>
+</main>
+
+<footer class="box--footer">
+    <p>Copyright © 2024 Department of Geophysics FMIPA Unpad</p>
+</footer>
+
+    <script src="dosen2.js"></script>
 </body>
-
 </html>

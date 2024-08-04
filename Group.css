@@ -139,6 +139,7 @@ body {
 }
 
 
+
 /* Container for the activities */
 .activities-container {
   width: 100%;
@@ -251,7 +252,6 @@ body {
 
 
 .box--footer {
-  background-color: #9D1414;
   background-image: url('Assets/bgnav.png');
   color: #ffffff;
   padding: 2vh 0;
@@ -259,7 +259,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto; /* Menempel di bawah */
+  position: fixed; /* Fix posisi footer di bagian bawah */
+  bottom: 0; /* Menempel di bagian bawah viewport */
   width: 100%; /* Lebar penuh */
   font-size: 0.8em; /* Ukuran font default */
   height: 20px; /* Tinggi default */

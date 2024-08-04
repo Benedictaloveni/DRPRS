@@ -256,10 +256,21 @@ body {
   text-decoration: underline;
 }
 
-.linkedin-logo {
-  width: 24px; /* Adjust the size as needed */
-  height: auto;
-  vertical-align: middle; /* Align the logo with text if necessary */
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contact-info a {
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+  color: #000; /* Ganti dengan warna teks yang sesuai */
+}
+
+.linkedin-logo, .email-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
 }
 
 .section-title {

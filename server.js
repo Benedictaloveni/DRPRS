@@ -1,61 +1,74 @@
-const fs = require('fs');
-const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs');
+const path = require('path');
+
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = 3000;
 
-// Path ke file JSON
-const filePath = path.join(__dirname, 'activities.json');
-
-// Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname)));
 
-// Endpoint untuk menangani pengiriman data
-app.post('/submit', (req, res) => {
-    const { jenis, hari, waktu } = req.body;
-
-    // Membaca file JSON
-    fs.readFile(filePath, 'utf8', (err, data) => {
+// Load activities
+app.get('/activities', (req, res) => {
+    const activitiesPath = path.join(__dirname, 'activities.json');
+    fs.readFile(activitiesPath, 'utf8', (err, data) => {
         if (err) {
-            console.error('Error membaca file JSON:', err);
-            return res.status(500).send('Error membaca file JSON');
+            return res.status(500).json([]);
+        }
+        res.json(JSON.parse(data || '[]'));
+    });
+});
+
+// Add activity
+app.post('/add-activity', (req, res) => {
+    const newActivity = req.body;
+    const activitiesPath = path.join(__dirname, 'activities.json');
+    fs.readFile(activitiesPath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ error: 'Gagal membaca file' });
         }
 
-        // Parsing data JSON
-        const activities = JSON.parse(data);
+        const activities = JSON.parse(data || '[]');
+        activities.push(newActivity);
 
-        // Menambahkan data baru
-        activities.push({ jenis, hari, waktu });
-
-        // Menyimpan kembali data ke file JSON
-        fs.writeFile(filePath, JSON.stringify(activities, null, 2), 'utf8', (err) => {
+        fs.writeFile(activitiesPath, JSON.stringify(activities, null, 2), (err) => {
             if (err) {
-                console.error('Error menulis ke file JSON:', err);
-                return res.status(500).send('Error menulis ke file JSON');
+                return res.status(500).json({ error: 'Gagal menyimpan file' });
             }
-            res.send('Data received and saved successfully!');
+            res.status(200).json({ message: 'Aktivitas berhasil ditambahkan' });
         });
     });
 });
 
-// Endpoint untuk mengambil data
-app.get('/activities', (req, res) => {
-    fs.readFile(filePath, 'utf8', (err, data) => {
+// Delete activity
+app.delete('/delete-activity', (req, res) => {
+    const activityToDelete = req.body;
+    const activitiesPath = path.join(__dirname, 'activities.json');
+    fs.readFile(activitiesPath, 'utf8', (err, data) => {
         if (err) {
-            console.error('Error membaca file JSON:', err);
-            return res.status(500).send('Error membaca file JSON');
+            return res.status(500).json({ error: 'Gagal membaca file' });
         }
-        res.json(JSON.parse(data));
+
+        let activities = JSON.parse(data || '[]');
+        activities = activities.filter(activity => 
+            activity.jenis !== activityToDelete.jenis || 
+            activity.hari !== activityToDelete.hari || 
+            activity.waktu !== activityToDelete.waktu
+        );
+
+        fs.writeFile(activitiesPath, JSON.stringify(activities, null, 2), (err) => {
+            if (err) {
+                return res.status(500).json({ error: 'Gagal menyimpan file' });
+            }
+            res.status(200).json({ message: 'Aktivitas berhasil dihapus' });
+        });
     });
 });
 
-// Start the server
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server berjalan di http://localhost:${PORT}`);
 });
-

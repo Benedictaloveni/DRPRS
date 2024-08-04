@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+}
+
+.box--header {
+  display: flex;
+  justify-content: flex-start; /* Pastikan elemen berada di kiri */
+  align-items: center;
+  background-image: url('Assets/bgnav.png');
+  position: sticky;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+
+
+.box--btn {
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.box--iconmenu,
+.box--tombol {
+  transition: transform 0.5s ease;
+}
+
+.box--iconmenu:hover,
+.box--tombol:hover {
+  transform: scale(1.2);
+}
+
+.box--icon {
+  height: 20px;
+}
+
+.box--logo img {
+  height: 50px;
+  margin: 0;
+  opacity: 0;
+  animation: slideRight 2s ease forwards;
+}
+
+
+.box--logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Geser ke kiri */
+  margin-left: 0; /* Pastikan margin-left diatur ke 0 */
+}
+
+.box--navigasi {
+  width: 80%;
+  align-items: center;
+  border: 1px solid transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
+  white-space: nowrap;
+}
+
+.box--subnavigasi {
+  list-style-type: none;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.box--iconmenu {
+  margin-left: 40px;
+  display: flex;
+  position: relative;
+}
+
+/* Tambahkan jarak antara ikon dan teks dalam elemen box--judul */
+.box--judul {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 101;
+    position: relative;
+  }
+  
+  .hamburger-menu .bar1,
+  .hamburger-menu .bar2,
+  .hamburger-menu .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .hamburger-menu .bar1,
+  .hamburger-menu .bar3 {
+    transition: transform 0.4s, opacity 0.4s;
+  }
+  
+  .hamburger-menu .bar2 {
+    opacity: 1;
+  }
+  
+  .hamburger-menu.active .bar1 {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger-menu.active .bar2 {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.active .bar3 {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9D1414; /* Background color */
+  width: 90%; /* Match the width of the parent */
+  box-shadow: 0px 8px 16px 0px #00000033; /* Box shadow for effect */
+  z-index: 1;
+  text-align: left;
+  padding: 0; /* Remove padding to avoid extra space */
+  top: 45px; /* Positioning below the parent */
+  right: 0; /* Align to the right if needed */
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 5px; /* Control spacing inside links */
+  font-size: 0.5em;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff; /* Hover background color */
+  color: #555; /* Hover text color */
+}
+
+.box--iconmenu:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Container to center align content and add padding */
+.container {
+    padding: 40px;
+    max-width: 1200px; /* Adjust the maximum width to center content */
+    margin: 0 auto; /* Center container horizontally */
+    border-radius: 30px; /* Add rounded corners */
+}
+
+/* Profile box styling */
+.profile-box {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+    border: 1px solid #9D1414;
+    background-color: #ffffff; /* Set a white background to contrast with container */
+    border-radius: 20px; /* Optional: Add rounded corners for the profile box */
+    gap: 20px; /* Add space between columns */
+    height: 380px;
+}
+
+/* Left side for profile photo */
+.profile-left {
+    flex: 1;
+}
+
+/* Profile photo styling */
+.profile-photo {
+    width: 250px; /* Make the profile photo larger */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+
+/* Profile information section */
+.profile-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+/* Info item styling */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Increase space between items */
+}
+
+/* Info icon styling */
+.info-icon {
+    width: 25px; /* Increase icon size */
+    height: 25px;
+    margin-right: 15px; /* Increase space between icon and text */
+}
+
+/* Right side for additional information */
+.profile-right {
+    flex: 2;
+    padding-left: 20px;
+}
+
+/* Styling for right-side information */
+.profile-right-info {
+    margin-bottom: 30px; /* Increase space between sections */
+}
+
+/* Additional sections styling */
+.additional-sections {
+    margin-top: 30px; /* Increase top margin */
+}
+
+/* Section header styling */
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Increase space between sections */
+}
+
+/* Vertical bar styling */
+.vertical-bar {
+    width: 5px;
+    height: 50px; /* Increase height of the vertical bar */
+    background-color: #9D1414;
+    margin-right: 10px; /* Increase space between bar and text */
+}
+
+/* Section header text styling */
+.section-header span {
+    font-size: 1.2em; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+}
+
+
+
+.box--footer {
+    background-image: url('Assets/bgnav.png');
+    color: #ffffff;
+    padding: 2vh 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; /* Menempel di bawah */
+    width: 100%; /* Lebar penuh */
+    font-size: 0.8em; /* Ukuran font default */
+    height: 20px; /* Tinggi default */
+  }
+  
+  /* Keyframe animations */
+@keyframes slideRight {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideLeft {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideTop {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  @media screen and (max-width: 1200px) {
+    .box--footer {
+      padding: 8px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
+      font-size: 0.75em; /* Ukuran font lebih kecil */
+      height: 35px; /* Tinggi lebih kecil */
+    }
+  
+    .dropdown-content {
+    top: 0;
+    right: 100%;
+    }
+  
+    .box--logo {
+      height: 50px;
+      margin-left: 0;
+      opacity: 0;
+      animation: slideRight 2s ease forwards;
+    }
+  
+  
+    .box--subnavigasi {
+      display: none;
+      width: auto;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #9D1414;
+      z-index: 80;
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start; /* Teks rata kiri */
+    }
+  
+    .box--subnavigasi.show {
+      display: flex;
+    }
+  
+    .box--subnavigasi li {
+      width: 100%; /* Pastikan elemen li mengisi lebar penuh */
+      display: flex; /* Flexbox untuk mengatur ikon dan teks */
+      align-items: center; /* Vertikal rata tengah */
+      margin-bottom: 10px; /* Jarak antar item */
+    }
+  
+    .box--subnavigasi li a {
+      text-decoration: none;
+      color: white; /* Warna teks */
+      font-size: 0.5em; /* Ukuran teks lebih kecil */
+      padding: 5px 10px; /* Padding untuk tautan */
+      display: flex; /* Flexbox untuk ikon dan teks */
+      align-items: center; /* Vertikal rata tengah */
+    }
+  
+    .box--subnavigasi li a img {
+      margin-right: 5px; /* Jarak antara ikon gambar dan teks */
+    }
+  
+    .box--iconmenu {
+      margin-left: auto;
+    }
+  
+    .hamburger-menu {
+      display: block;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  
+    .hamburger-menu .bar1,
+    .hamburger-menu .bar2,
+    .hamburger-menu .bar3 {
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  
+    .hamburger-menu.active .bar1 {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger-menu.active .bar2 {
+      opacity: 0;
+    }
+  
+    .hamburger-menu.active .bar3 {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+  }
+  
+  @media (max-width: 414px) {
+    .box--footer {
+      padding: 5px 0; /* Sesuaikan padding untuk mengecilkan tinggi footer */
+      font-size: 0.6em; /* Ukuran font lebih kecil */
+      height: 30px; /* Tinggi lebih kecil */
+    }
+    
+    .box--logo img {
+      height: 40px; /* Sesuaikan tinggi logo jika diperlukan */
+      margin: 0 0 0 20px; /* Sesuaikan margin jika diperlukan */
+    }
+  
+    .box--logo {
+      height: 50px;
+      margin-left: 0;
+      opacity: 0;
+      animation: slideRight 2s ease forwards;
+    }
+    
+    .box--icon {
+      height: 15px;
+    }
+
+    .box--logo img {
+      height: 25px; /* Tinggi lebih kecil untuk logo */
+      margin: 0;
+    }
+  
+  
+    .dropdown-content {
+      top: 0;
+      right: 100%;
+      }
+      
+  }
+  
