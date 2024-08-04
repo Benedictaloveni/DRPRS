@@ -141,6 +141,90 @@ body {
   display: block; /* Show dropdown on hover */
 }
 
+/* Slider Container */
+.slider {
+  position: relative;
+  max-width: 90%; /* Maksimal lebar container */
+  margin: auto;
+  background-color: #9D1414; /* Background color of the box */
+  border-radius: 20px; /* Rounded border */
+  padding: 0; /* Remove padding inside the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+  overflow: hidden; /* Ensure no overflow */
+  height: 200px; /* Tetapkan tinggi tetap untuk slider */
+}
+
+/* Slides */
+.slides {
+  display: flex;
+  overflow: hidden;
+  height: 100%; /* Pastikan slides mengambil tinggi penuh dari container */
+}
+
+.slide {
+  display: flex; /* Align image and caption horizontally */
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Container for image and caption */
+.slide-content {
+  display: flex; /* Align image and caption horizontally */
+  width: 100%;
+  height: 100%; /* Pastikan container konten mengambil tinggi penuh dari slider */
+  align-items: center; /* Center items vertically */
+}
+
+/* Fixed size for image */
+.slide img {
+  width: 50%; /* Gambar mengambil setengah lebar container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Fixed size for caption */
+.caption {
+  width: 50%; /* Teks mengambil setengah lebar container */
+  color: #ffffff;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for readability */
+  border-radius: 5px;
+  text-align: left; /* Align text to the left */
+  box-sizing: border-box; /* Include padding in width calculation */
+  height: 100%; /* Make caption height match the container */
+  overflow: hidden; /* Hide overflow text */
+}
+
+/* Navigation Arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: 0.6s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #ffffffcc;
+}
+
+
 
 .hamburger-menu {
   display: none;
@@ -249,7 +333,7 @@ body {
   font-size: 24px; /* Ukuran font garis vertikal */
   color: #9D1414; /* Warna garis vertikal */
   border-left: 5px solid #9D1414; /* Ketebalan dan warna garis vertikal */
-  height: 24px; /* Sesuaikan dengan ukuran font */
+  height: 50px; /* Sesuaikan dengan ukuran font */
   margin-right: 10px; /* Spasi antara garis vertikal dan judul */
   display: inline-block; /* Agar garis vertikal tidak memanjang */
 }
@@ -305,62 +389,79 @@ body {
   background-color: #9D1414; /* Latar belakang halaman aktif */
 }
 
-
-.background-box {
-  position: relative; /* Mengatur kontainer relatif agar child bisa diposisikan absolut */
-  background-color: #9d1414bb;
-  opacity: 40px;
-  background-size: cover;
-  background-position: center;
-  padding: 40px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.welcome-box {
-  position: absolute;
-  top: 70%; /* Posisi di bawah elemen sebelumnya */
-  right: 115px; /* Mengatur ke posisi paling kiri */
-  background-color: #9D1414; /* Warna merah */
-  color: #fff;
-  padding: 0 20px; /* Mengurangi padding untuk memperkecil kotak */
-  border-radius: 15px; /* Border yang agak bulat */
-  font-size: 14px; /* Mengatur ukuran font lebih kecil */
-  white-space: nowrap; /* Mencegah teks membungkus ke baris baru */
-}
-
-
+/* Styling for the main title */
 .main-title {
   font-family: 'Lucida Sans Regular', sans-serif;
-  font-size: 1.5em;
-  text-align: center;
-  color: #fff;
-  margin: 20px 0;
+  font-size: 2em;
+  text-align: left;
+  color: #000000;
+  margin: 50px 85px 20px; /* Adjusted margin to move down from container and space below */
   opacity: 0;
   animation: fadeIn 2s ease forwards;
   font-style: italic;
+  position: relative; /* Ensure relative positioning for pseudo-element */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
 }
 
+/* Vertical bar styling */
+.vertical-bar1 {
+  width: 5px; /* Thickness of the vertical bar */
+  height: 50px; /* Height of the vertical bar */
+  background-color: #9D1414; /* Red color for the vertical bar */
+  position: absolute; /* Position absolutely relative to the main title */
+  left: -15px; /* Adjusted to align with the text */
+  top: 50%; /* Center the vertical bar vertically */
+  transform: translateY(-50%); /* Adjust alignment to the middle */
+}
+
+
+/* Styling for the subtitle */
 .sub-title {
   font-family: 'DM Serif Display', serif;
   font-size: 1em;
-  text-align: center;
-  color: #fff;
-  margin-top: 10px;
+  text-align: left;
+  color: #000000;
+  margin: 50px 70px 20px; /* Adjusted margin to reduce space above subtitle and space below */
   font-weight: normal;
   opacity: 0;
   animation: fadeIn 3s ease forwards;
 }
 
+/* Styling for the description */
 .description {
-  margin: 40px 70px 70px;
+  margin: 40px 70px 40px; /* Adjusted margin for closer spacing */
   font-size: 1em;
   text-align: justify;
-  color: #fff;
+  color: #000000;
   opacity: 0;
   animation: fadeIn 4s ease forwards;
 }
 
+/* Styling for the list */
+.highlight-list {
+  padding: 0;
+  list-style: none; /* Remove default list bullets */
+}
+
+/* Styling for list items */
+.highlight-list li {
+  font-size: 1em;
+  color: #000000;
+  position: relative;
+  padding-left: 30px; /* Space for the custom bullet */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+/* Red strip styling */
+.highlight-list li::before {
+  content: "-"; /* Use dash as the list bullet */
+  position: absolute;
+  left: 0;
+  color: #9D1414; /* Red color for the strip */
+  font-size: 3em; /* Adjust size of the dash */
+  line-height: 0.3; /* Align dash with text */
+}
 
 
 /* Keyframe animations */

@@ -1,14 +1,18 @@
 {
-    "name": "group-meetings",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "dependencies": {
-      "body-parser": "^1.19.0",
-      "express": "^4.17.1"
-    }
+  "name": "drprs",
+  "version": "1.0.0",
+  "description": "DRPRS project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2"
   }
+}
+
+
   

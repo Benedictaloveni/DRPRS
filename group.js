@@ -36,50 +36,8 @@ function toggleDropdown(event, dropdownId) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const activitiesContainer = document.querySelector('.activities-container');
     const addActivityBtn = document.querySelector('.add-activity-btn');
 
-    // Load activities from localStorage
-    function loadActivities() {
-        const activities = JSON.parse(localStorage.getItem('activities')) || [];
-        activities.forEach(activity => addActivity(activity, false));
-    }
-
-    // Save activities to localStorage
-    function saveActivities(activities) {
-        localStorage.setItem('activities', JSON.stringify(activities));
-    }
-
-    // Add an activity to the DOM and localStorage
-    function addActivity(activityData, save = true) {
-        const activityBox = document.createElement('div');
-        activityBox.classList.add('activity-box');
-        activityBox.innerHTML = `
-            <button class="delete-btn">Done</button>
-            <p>${activityData}</p>
-        `;
-        activityBox.querySelector('.delete-btn').addEventListener('click', function() {
-            deleteActivity(activityBox);
-        });
-        activitiesContainer.insertBefore(activityBox, activitiesContainer.firstChild);
-
-        if (save) {
-            const activities = JSON.parse(localStorage.getItem('activities')) || [];
-            activities.unshift(activityData);
-            saveActivities(activities);
-        }
-    }
-
-    // Delete an activity from the DOM and localStorage
-    function deleteActivity(activityBox) {
-        const activities = JSON.parse(localStorage.getItem('activities')) || [];
-        const index = Array.from(activitiesContainer.children).indexOf(activityBox);
-        activities.splice(index, 1);
-        saveActivities(activities);
-        activityBox.remove();
-    }
-
-    // Add a new activity on button click
     addActivityBtn.addEventListener('click', function() {
         const jenisInput = document.querySelector('input[name="jenis"]');
         const hariInput = document.querySelector('input[name="hari"]');
@@ -90,18 +48,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const waktu = waktuInput.value;
 
         if (jenis && hari && waktu) {
-            const activityData = `${jenis} pada ${hari} pukul ${waktu}`;
-            addActivity(activityData);
-
-            // Reset form
-            jenisInput.value = '';
-            hariInput.value = '';
-            waktuInput.value = '';
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    jenis,
+                    hari,
+                    waktu
+                })
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); // Optional: handle the response
+                // Reset form
+                jenisInput.value = '';
+                hariInput.value = '';
+                waktuInput.value = '';
+            })
+            .catch(error => console.error('Error:', error));
         } else {
             alert('Semua field harus diisi!');
         }
     });
-
-    // Initial load
-    loadActivities();
 });

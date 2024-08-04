@@ -67,6 +67,7 @@ function populateTable(page) {
             <td>${item.string_field_1}</td>
             <td>${item.string_field_2}</td>
             <td>${item.string_field_3}</td>
+            <td>${item.string_field_4}</td>
         `;
         tableBody.appendChild(row);
     });

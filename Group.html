@@ -86,29 +86,31 @@
             <main>
                 <!-- Judul Halaman -->
                 <div class="center-text">
-                  <h1>Group Meeting</h1>
+                    <h1>Group Meeting</h1>
                 </div>
-              
+            
                 <!-- Kegiatan Section -->
                 <div class="activities-container">
-                  <div class="activity-box">
-                    <button class="delete-btn" onclick="hapusKegiatan(this)"> Done </button>
-                    <p>Semua anggota aktif dalam group ini diharapkan mengikuti jadwal kegiatan berikut:</p>
-                    <form>
-                      <label>Jenis kegiatan:</label>
-                      <input type="text" name="jenis"><br>
-                      
-                      <label>Hari:</label>
-                      <input type="date" name="hari"><br>
-                      
-                      <label>Waktu:</label>
-                      <input type="time" name="waktu"><br>
-                    </form>
-                  </div>
-                  <!-- Button for adding new activities -->
-                  <button class="add-activity-btn" onclick="tambahKegiatan()">Tambah Kegiatan</button>
+                    <!-- Existing activities will be loaded here -->
+                    <div id="activity-list"></div>
+                    
+                    <div class="activity-box">
+                        <button class="delete-btn" onclick="hapusKegiatan(this)"> Done </button>
+                        <form id="activity-form">
+                            <label>Jenis kegiatan:</label>
+                            <input type="text" name="jenis" required><br>
+                            
+                            <label>Hari:</label>
+                            <input type="date" name="hari" required><br>
+                            
+                            <label>Waktu:</label>
+                            <input type="time" name="waktu" required><br>
+                            <button type="submit" class="add-activity-btn">Tambah Kegiatan</button>
+                        </form>
+                    </div>
                 </div>
-              </main>
+            </main>
+            
               
 
         <div class="box--btn">

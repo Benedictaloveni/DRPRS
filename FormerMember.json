@@ -3,169 +3,197 @@
         "string_field_0": "0",
         "string_field_1": "0",
         "string_field_2": "0",
-        "string_field_3": "0"
+        "string_field_3": "0",
+        "string_field_4": "0"
       },
 
       {
         "string_field_0": "1",
         "string_field_1": "Muhammad Faizal Rafli",
         "string_field_2": "2020",
-        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+        "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
       },{
         "string_field_0": "2",
         "string_field_1": "Tubagus Nur Rahmat Putra",
         "string_field_2": "2019",
-        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+        "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
       },
       {
         "string_field_0": "3",
         "string_field_1": "Rania Alifa Desenaldo",
         "string_field_2": "2019",
-        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+        "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
       },
       {
         "string_field_0": "4",
         "string_field_1": "Aristo Alhakim Anadya",
         "string_field_2": "2019",
-        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+        "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
       },
       {
         "string_field_0": "5",
         "string_field_1": "Asep Purnama",
         "string_field_2": "2018",
-        "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+        "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+        "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
       },
     {      
       "string_field_0": "6",
       "string_field_1": "Fauzian Dwi Ramadhan",
       "string_field_2": "2018",
-      "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "7",
       "string_field_1": "Gian Agistian Algifari",
       "string_field_2": "2018",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "8",
       "string_field_1": "Fatimah Az-Zahra",
       "string_field_2": "2018",
-      "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "9",
       "string_field_1": "Yoghi Sinaga",
       "string_field_2": "2018",
-      "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href=''><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "10",
       "string_field_1": "Muhammad I'tikafi Khoirul Haq",
       "string_field_2": "2018",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "11",
       "string_field_1": "Sulthan Golden Nior",
       "string_field_2": "2018",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "12",
       "string_field_1": "Devin Hartanto",
       "string_field_2": "2017",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "13",
       "string_field_1": "Rifky Nauval Hendrawan S. P.",
       "string_field_2": "2017",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "14",
       "string_field_1": "Irvan Zidny",
       "string_field_2": "2017",
-      "string_field_3": "<a href='' ><img src='Assets/link.png'alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png'alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "15",
       "string_field_1": "Anggiat S.",
       "string_field_2": "2017",
-      "string_field_3": "<a href='' ><img src='Assets/link.png'alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png'alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
         "string_field_0": "16",
         "string_field_1": "Erik Irawan",
         "string_field_2": "2017",
-        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+        "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+        "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
       },
     {
       "string_field_0": "17",
       "string_field_1": "Nur Sukma Pambudi",
       "string_field_2": "2016",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "18",
       "string_field_1": "Risya Fauziyyah",
       "string_field_2": "2016",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "19",
       "string_field_1": "Reza Eka Pangestu",
       "string_field_2": "2016",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "20",
       "string_field_1": "Muhammad Ario Eko Rahadianto",
       "string_field_2": "2015",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "21",
       "string_field_1": "Rizky Mochamad Fauzi",
       "string_field_2": "2015",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>n"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>n",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "22",
       "string_field_1": "Dzulfiqar Naufal Fawwaz",
       "string_field_2": "2015",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "23",
       "string_field_1": "Dery Krisnatria Mulyana",
       "string_field_2": "2015",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "24",
       "string_field_1": "Ghina Aulia Tiarasari",
       "string_field_2": "2015",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "25",
       "string_field_1": "Farhan Hamid Lubis",
       "string_field_2": "2014",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "26",
       "string_field_1": "Nurul Trimulyo",
       "string_field_2": "2013",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     },
     {
       "string_field_0": "27",
       "string_field_1": "Salim Muhammad",
       "string_field_2": "2011",
-      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
+      "string_field_3": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>",
+      "string_field_4": "<a href='' ><img src='Assets/link.png' alt='Link' class='link-icon'></a>"
     }
     
   ]
