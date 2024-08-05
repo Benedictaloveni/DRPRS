@@ -35,87 +35,39 @@ function toggleDropdown(event, dropdownId) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const activitiesContainer = document.querySelector('.activities-container');
-    const addActivityBtn = document.querySelector('.add-activity-btn');
+// Function to add a new activity
+function tambahKegiatan() {
+    // Get the values from the input fields
+    const jenis = document.querySelector("input[name='jenis']").value;
+    const hari = document.querySelector("input[name='hari']").value;
+    const waktu = document.querySelector("input[name='waktu']").value;
 
-    // Load activities from the server
-    function loadActivities() {
-        fetch('/activities')
-            .then(response => response.json())
-            .then(activities => {
-                activities.forEach(activity => addActivityToDOM(activity));
-            })
-            .catch(error => console.error('Error loading activities:', error));
-    }
+    // Format the input values into a readable string
+    const kegiatanText = `${jenis} pada ${new Date(hari).toLocaleDateString('id-ID', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'})} pukul ${waktu}`;
 
-    // Add an activity to the DOM
-    function addActivityToDOM(activityData) {
-        const activityBox = document.createElement('div');
-        activityBox.classList.add('activity-box');
-        activityBox.innerHTML = `
-            <button class="delete-btn" onclick="hapusKegiatan(this)">Done</button>
-            <p>${activityData.jenis} pada ${activityData.hari} pukul ${activityData.waktu}</p>
-        `;
-        activitiesContainer.insertBefore(activityBox, addActivityBtn);
-    }
+    // Create a new div element for the activity
+    const newActivityBox = document.createElement("div");
+    newActivityBox.classList.add("activity-box");
 
-    // Add a new activity
-    function tambahKegiatan() {
-        const jenisInput = document.querySelector('input[name="jenis"]');
-        const hariInput = document.querySelector('input[name="hari"]');
-        const waktuInput = document.querySelector('input[name="waktu"]');
+    // Add inner HTML to the new activity box
+    newActivityBox.innerHTML = `
+        <p>${kegiatanText}</p>
+        <button class="delete-btn" onclick="hapusKegiatan(this)">Done</button>
+    `;
 
-        const jenis = jenisInput.value.trim();
-        const hari = hariInput.value;
-        const waktu = waktuInput.value;
+    // Append the new activity box to the top of the container
+    const container = document.querySelector(".activities-container");
+    const addButton = document.querySelector(".add-activity-btn");
+    container.insertBefore(newActivityBox, container.firstChild);
 
-        if (jenis && hari && waktu) {
-            const activityData = { jenis, hari, waktu };
-            addActivityToDOM(activityData);
+    // Clear the input fields
+    document.querySelector("input[name='jenis']").value = '';
+    document.querySelector("input[name='hari']").value = '';
+    document.querySelector("input[name='waktu']").value = '';
+}
 
-            // Save to server
-            fetch('/add-activity', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(activityData)
-            })
-            .then(response => response.json())
-            .then(data => console.log(data.message))
-            .catch(error => console.error('Error saving activity:', error));
-
-            // Reset form
-            jenisInput.value = '';
-            hariInput.value = '';
-            waktuInput.value = '';
-        } else {
-            alert('Semua field harus diisi!');
-        }
-    }
-
-    // Delete an activity
-    function hapusKegiatan(button) {
-        const activityBox = button.parentElement;
-        const jenis = activityBox.querySelector('p').textContent.split(' pada ')[0];
-        const hari = activityBox.querySelector('p').textContent.split(' pada ')[1].split(' pukul ')[0];
-        const waktu = activityBox.querySelector('p').textContent.split(' pukul ')[1];
-
-        const activityData = { jenis, hari, waktu };
-
-        fetch('/delete-activity', {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(activityData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.message);
-            activityBox.remove();
-        })
-        .catch(error => console.error('Error deleting activity:', error));
-    }
-
-    // Initial load
-    loadActivities();
-    addActivityBtn.addEventListener('click', tambahKegiatan);
-});
+// Function to delete an activity
+function hapusKegiatan(button) {
+    // Remove the parent activity box
+    button.parentElement.remove();
+}

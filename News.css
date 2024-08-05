@@ -177,6 +177,7 @@ body {
 .center-text {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .center-text h1 {
@@ -201,165 +202,66 @@ body {
   height: 20px; /* Tinggi default */
 }
 
-.table-container {
-  position: relative;
-  max-width: 90%;
-  padding: 1rem;
-  margin: 1rem auto;
-  border-radius: 1rem;
-  text-align: center;
-  overflow-x: auto;
-  background-color: #fff; /* Background color for the container */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
-  min-height: 500px;
+/* Style for each news article */
+.news-article {
+  position: relative; /* Position relative for absolute positioning of lines */
+  padding: 20px;
+  padding-left: 70px; /* Space from the left edge */
+  padding-right: 70px; /* Space from the right edge */
 }
 
-.no-container {
-  width: 100px; /* Atur lebar untuk kolom No */
-}
-
-.year-container {
-  width: 120px; /* Atur lebar untuk kolom Tahun */
-}
-
-
-.table-controls {
-  display: flex;
-  justify-content: space-between; /* Posisikan elemen di sebelah kiri dan kanan */
-  align-items: center;
-  margin-bottom: 10px; /* Atur margin bawah sesuai kebutuhan */
-}
-
-.search-input {
-  background-color: #fff; /* Ubah latar belakang menjadi putih */
-  color: #9D1414; /* Warna teks tetap */
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.search-input:hover {
-  background-color: #9D1414; /* Ubah latar belakang saat dihover */
-  color: #fff; /* Ubah warna teks saat dihover */
-}
-
-.search-input:focus {
-  outline: none;
-}
-
-.entries-dropdown {
-  margin-right: 10px; /* Atur margin kanan untuk memisahkan dari elemen lain */
-  background-color: #fff; /* Latar belakang dropdown */
-  color: #9D1414; /* Warna teks dropdown */
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-th {
-  position: relative; /* Menambahkan konteks posisi untuk anak elemen absolut */
-  text-align: center; /* Pusatkan teks header */
-}
-
-.sort-buttons {
-  position: absolute;
-  right: 20px; /* Memposisikan ke kanan */
-  top: 50%;
-  transform: translateY(-50%); /* Vertically center the buttons */
-  display: flex;
-  flex-direction: column; /* Mengatur tombol dalam kolom vertikal */
-  align-items: center;
-}
-
-.sort-button {
-  background: none;
-  border: none;
-  font-size: 0.7em;
-  cursor: pointer;
-  color: #fffcfc;
-  padding: 0;
-  margin: 0;
-}
-
-.sort-arrow {
-  font-size: 0.8em; /* Ukuran panah */
-  margin: 0; /* Menghapus margin default */
-}
-
-.sort-button:hover .sort-arrow {
-  color: #000; /* Warna panah saat hover */
-} 
-
-.entries-dropdown:hover {
-  background-color: #9D1414; /* Ubah latar belakang saat dihover */
-  color: #fff; /* Ubah warna teks saat dihover */
-}
-
-.table-controls button,
-.pagination button,
-.pagination span {
-  background-color: #fff; /* Ubah latar belakang tombol menjadi putih */
-  color: #000000; /* Warna teks tetap */
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.table-controls button:hover,
-.pagination button:hover,
-.pagination span:hover {
-  background-color: #9D1414; /* Ubah latar belakang saat dihover */
-  color: #fff; /* Ubah warna teks saat dihover */
-  cursor: pointer; /* Tambahkan kursor pointer */
-}
-
-
-/* Styling untuk dropdown options */
-.entries-dropdown select {
-  background-color: #fff; /* Latar belakang dropdown options */
-  color: #9D1414; /* Warna teks dropdown options */
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.entries-dropdown select:hover {
-  background-color: #9D1414; /* Ubah latar belakang saat dihover */
-  color: #fff; /* Ubah warna teks saat dihover */
-}
-
-
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 10px;
-}
-
-table th {
+/* Style for the red lines */
+.line {
+  height: 2px;
   background-color: #9D1414;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px; /* Increased padding for better spacing */
+  position: absolute;
+  left: 70px; /* 40px from the left edge */
+  right: 70px; /* 40px from the right edge */
 }
 
-table th,
-table td {
-  border: 1px solid #ccc;
-  padding: 10px; /* Increased padding for better spacing */
-  text-align: center;
+/* Top line */
+.top-line {
+  top: -2px; /* Position just outside the top of the article */
 }
 
-table td:nth-child(1),
-table td:nth-child(3) {
-  text-align: center; /* Mengatur teks di kolom kedua (NPM) menjadi ditengah */
+/* Bottom line */
+.bottom-line {
+  bottom: -2px; /* Position just outside the bottom of the article */
 }
 
-table td {
-  text-align: left; /* Mengatur teks di seluruh data tabel menjadi rata kiri */
+/* Container for image and news info */
+.article-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0; /* Padding on top and bottom */
+}
+
+/* Style for the news image */
+.news-image {
+  width: 30%; /* Adjust width to fit your design */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Style for news info */
+.news-info {
+  width: 65%; /* Adjust width to fit your design */
+  margin-left: 20px; /* Space between image and text */
+}
+
+/* Style for news title */
+.news-title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Style for news body */
+.news-body {
+  margin: 10px 0 0;
+  color: #666;
 }
 
 /* Keyframe animations */

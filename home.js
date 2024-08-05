@@ -84,29 +84,50 @@ function lastPage() {
   showPage(currentPage);
 }
 
-// Initialize pagination and show content for the first page
-updatePagination();
-showPage(currentPage);
-
-let slideIndex = 0;
-showSlides(slideIndex);
-
-function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    if (n >= slides.length) {slideIndex = 0}
-    if (n < 0) {slideIndex = slides.length - 1}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex].style.display = "block";
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-    showSlides(slideIndex);
-});
+  // Initialize pagination and show content for the first page
+  updatePagination();
+  showPage(currentPage);
 
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName("slide");
+  const totalSlides = slides.length;
+  const slideInterval = 5000; // 5 detik
+
+  // Show the slides
+  function showSlides(n) {
+      let i;
+      if (n >= totalSlides) { slideIndex = 0 }
+      if (n < 0) { slideIndex = totalSlides - 1 }
+      for (i = 0; i < totalSlides; i++) {
+          slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+  }
+
+  // Function to change slide manually
+  function changeSlide(n) {
+      showSlides(slideIndex += n);
+  }
+
+  // Autoplay functionality
+  function nextSlide() {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      showSlides(slideIndex);
+  }
+
+  // Set an interval to change slide every 5 seconds
+  setInterval(nextSlide, slideInterval);
+
+  // Initial display
+  showSlides(slideIndex);
+
+  // Optional: If you have buttons to control slides manually
+  document.querySelector(".prev").addEventListener("click", function() {
+      changeSlide(-1);
+  });
+
+  document.querySelector(".next").addEventListener("click", function() {
+      changeSlide(1);
+  });
+});

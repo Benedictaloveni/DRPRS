@@ -85,79 +85,69 @@
             <div class="center-text">
                 <h1>News Archive</h1>
             </div>
-
-                   <!-- Kontainer Tabel -->
-        <div class="table-container">
-
-            <!-- Kontrol Tabel -->
-            <div class="table-controls">
-
-                <!-- Dropdown Entries per Page -->
-                <div>
-                    <label for="entriesPerPage">Entries per page:</label>
-                    <select id="entriesPerPage" onchange="changeEntriesPerPage()">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="15">15</option>
-                        <option value="25">25</option>
-                    </select>
-                </div>
-
-                <!-- Input Search dan Tombol Search -->
-                <div>
-                    <input type="text" id="searchInput" placeholder="Search...">
-                    <button onclick="handleSearch()">Search</button>
-                </div>
-            </div>
-
-            <!-- Tabel Data -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            <div class="no-container">
-                                No
-                                <div class="sort-buttons">
-                                    <button class="sort-button" onclick="sortTable(0, 'asc')">▲</button>
-                                    <button class="sort-button" onclick="sortTable(0, 'desc')">▼</button>
-                                </div>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="header-container">
-                                Berita
-                                <div class="sort-buttons">
-                                    <button class="sort-button" onclick="sortTable(1, 'asc')">▲</button>
-                                    <button class="sort-button" onclick="sortTable(1, 'desc')">▼</button>
-                                </div>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="year-container">
-                                Tahun
-                                <div class="sort-buttons">
-                                    <button class="sort-button" onclick="sortTable(2, 'asc')">▲</button>
-                                    <button class="sort-button" onclick="sortTable(2, 'desc')">▼</button>
-                                </div>
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    
-                </tbody>
-            </table>
-
-            <!-- Pagination -->
-            <div class="pagination">
-                <button onclick="firstPage()"> « </button>
-                <button onclick="previousPage()"> ‹ </button>
-                <button onclick="nextPage()"> › </button>
-                <button onclick="lastPage()"> » </button>
-            </div>
-        </div>
         
-    </main>
+            <!-- News Article 1 -->
+            <div class="news-article">
+                <div class="line top-line"></div>
+                <div class="article-content">
+                    <img src="foto1.jpg" alt="News Image 1" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-title">Judul Berita 1 - Tahun Berita 1</h2>
+                        <p class="news-body">Isi Berita 1</p>
+                    </div>
+                </div>
+                <div class="line bottom-line"></div>
+            </div>
+        
+            <!-- News Article 2 -->
+            <div class="news-article">
+                <div class="article-content">
+                    <img src="foto2.jpg" alt="News Image 2" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-title">Judul Berita 2 - Tahun Berita 2</h2>
+                        <p class="news-body">Isi Berita 2</p>
+                    </div>
+                </div>
+                <div class="line bottom-line"></div>
+            </div>
+        
+            <!-- News Article 3 -->
+            <div class="news-article">
+                <div class="article-content">
+                    <img src="foto3.jpg" alt="News Image 3" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-title">Judul Berita 3 - Tahun Berita 3</h2>
+                        <p class="news-body">Isi Berita 3</p>
+                    </div>
+                </div>
+                <div class="line bottom-line"></div>
+            </div>
+        
+            <!-- News Article 4 -->
+            <div class="news-article">
+                <div class="article-content">
+                    <img src="foto4.jpg" alt="News Image 4" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-title">Judul Berita 4 - Tahun Berita 4</h2>
+                        <p class="news-body">Isi Berita 4</p>
+                    </div>
+                </div>
+                <div class="line bottom-line"></div>
+            </div>
+        
+            <!-- News Article 5 -->
+            <div class="news-article">
+                <div class="article-content">
+                    <img src="foto5.jpg" alt="News Image 5" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-title">Judul Berita 5 - Tahun Berita 5</h2>
+                        <p class="news-body">Isi Berita 5</p>
+                    </div>
+                </div>
+                <div class="line bottom-line"></div>
+            </div>
+        </main>
+        
 
         <div class="box--btn">
             <a href="home.html"></a>

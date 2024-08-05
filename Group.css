@@ -139,11 +139,10 @@ body {
 }
 
 
-
-/* Container for the activities */
-.activities-container {
+ /* Container for the activities */
+ .activities-container {
   width: 100%;
-  max-width: 700px;
+  max-width: 61.5%;
   margin: 20px auto;
   text-align: left;
 }
@@ -168,6 +167,7 @@ body {
   margin-bottom: 10px;
   background-color: #FFFFFF;
   text-align: left;
+  border-radius: 8px; /* Rounded corners */
 }
 
 .delete-btn {
@@ -259,11 +259,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; /* Fix posisi footer di bagian bawah */
-  bottom: 0; /* Menempel di bagian bawah viewport */
+  margin-top: auto; /* Menempel di bawah */
   width: 100%; /* Lebar penuh */
   font-size: 0.8em; /* Ukuran font default */
   height: 20px; /* Tinggi default */
+}
+
+.fixed-info {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #9D1414;
+  background-color: #FFFFFF;
+  border-radius: 8px; /* Rounded corners */
 }
 
 /* Keyframe animations */

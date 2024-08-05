@@ -152,6 +152,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
   overflow: hidden; /* Ensure no overflow */
   height: 200px; /* Tetapkan tinggi tetap untuk slider */
+  top: 40px;
 }
 
 /* Slides */
@@ -223,8 +224,6 @@ body {
 .prev:hover, .next:hover {
   background-color: #ffffffcc;
 }
-
-
 
 .hamburger-menu {
   display: none;
@@ -395,7 +394,7 @@ body {
   font-size: 2em;
   text-align: left;
   color: #000000;
-  margin: 50px 85px 20px; /* Adjusted margin to move down from container and space below */
+  margin: 100px 85px 20px; /* Adjusted margin to move down from container and space below */
   opacity: 0;
   animation: fadeIn 2s ease forwards;
   font-style: italic;
@@ -422,7 +421,7 @@ body {
   font-size: 1em;
   text-align: left;
   color: #000000;
-  margin: 50px 70px 20px; /* Adjusted margin to reduce space above subtitle and space below */
+  margin: 40px 70px 20px; /* Adjusted margin to reduce space above subtitle and space below */
   font-weight: normal;
   opacity: 0;
   animation: fadeIn 3s ease forwards;

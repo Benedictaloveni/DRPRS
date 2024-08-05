@@ -79,34 +79,35 @@
                 <div class="bar3"></div>
             </div>
         </header>
-
-        <main>
-         
             
             <main>
                 <!-- Judul Halaman -->
                 <div class="center-text">
-                  <h1>Group Meeting</h1>
+                    <h1>Group Meeting</h1>
                 </div>
-              
+
+                <!-- Fixed Information Section -->
+            <div class="fixed-info">
+                <p>Semua anggota aktif dalam group ini diharapkan mengikuti jadwal kegiatan berikut:</p>
+            </div>
+        
                 <!-- Kegiatan Section -->
                 <div class="activities-container">
-                  <div class="activity-box">
-                    <button class="delete-btn" onclick="hapusKegiatan(this)"> Done </button>
-                    <p>Semua anggota aktif dalam group ini diharapkan mengikuti jadwal kegiatan berikut:</p>
-                    <form>
-                      <label>Jenis kegiatan:</label>
-                      <input type="text" name="jenis"><br>
-                      
-                      <label>Hari:</label>
-                      <input type="date" name="hari"><br>
-                      
-                      <label>Waktu:</label>
-                      <input type="time" name="waktu"><br>
-                    </form>
-                  </div>
-                  <!-- Button for adding new activities -->
-                  <button class="add-activity-btn" onclick="tambahKegiatan()">Tambah Kegiatan</button>
+                    <div class="activity-box">
+                        <button class="delete-btn" onclick="hapusKegiatan(this)">Done</button>
+                        <form>
+                            <label>Jenis kegiatan:</label>
+                            <input type="text" name="jenis"><br>
+                            
+                            <label>Hari:</label>
+                            <input type="date" name="hari"><br>
+                            
+                            <label>Waktu:</label>
+                            <input type="time" name="waktu"><br>
+                        </form>
+                    </div>
+                    <!-- Button for adding new activities -->
+                    <button class="add-activity-btn" onclick="tambahKegiatan()">Tambah Kegiatan</button>
                 </div>
               </main>
               
